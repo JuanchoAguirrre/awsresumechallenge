@@ -1,0 +1,91 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'resume-challenge-sam
+
+  '
+Globals:
+  Function:
+    Timeout: 20
+Resources:
+  DynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: juanchos-cloud-resume-challenge
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+      - AttributeName: ID
+        AttributeType: N
+      KeySchema:
+      - AttributeName: ID
+        KeyType: HASH
+  GetDB:
+    Type: AWS::Serverless::Function
+    Properties:
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: DynamoDBTable
+      CodeUri: GetDB
+      Handler: app.get_db
+      Runtime: python3.8
+      Architectures:
+      - x86_64
+      MemorySize: 512
+      Events:
+        Catchall:
+          Type: Api
+          Properties:
+            Path: /getdb
+            Method: GET
+  PutDB:
+    Type: AWS::Serverless::Function
+    Properties:
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: DynamoDBTable
+      CodeUri: PutDB
+      Handler: app.put_db
+      Runtime: python3.8
+      Architectures:
+      - x86_64
+      MemorySize: 512
+      Events:
+        Catchall:
+          Type: Api
+          Properties:
+            Path: /putdb
+            Method: PUT
+Outputs:
+  GetDBApi:
+    Description: API Gateway endpoint URL for Prod stage for Hello World function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.us-east-1.amazonaws.com/Prod/getdb"
+  GetDB:
+    Description: GetDB method Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - GetDB
+      - Arn
+  GetDBIamRole:
+    Description: Implicit IAM Role created for GetDB method
+    Value:
+      Fn::GetAtt:
+      - GetDB
+      - Arn
+  PutDBApi:
+    Description: API Gateway endpoint URL for Prod stage for Hello World function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.us-east-1.amazonaws.com/Prod/putdb"
+  PutDB:
+    Description: GetDB method Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - PutDB
+      - Arn
+  PutDBIamRole:
+    Description: Implicit IAM Role created for GetDB method
+    Value:
+      Fn::GetAtt:
+      - PutDB
+      - Arn

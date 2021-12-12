@@ -1,0 +1,107 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  resume-challenge-sam
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 20
+
+Resources:
+
+#  LambdaFunctionOverHttps:
+#     Type: AWS::Serverless::Function
+#     Properties:
+#       Handler: index.handler
+#       Runtime: nodejs12.x
+#       Policies: AmazonDynamoDBFullAccess
+#       Events:
+#         HttpPost:
+#           Type: Api
+#           Properties:
+#             Path: '/DynamoDBOperations/DynamoDBManager'
+#             Method: post
+
+  # ResumeWebsite:
+  #   Type: AWS::S3::Bucket
+  #   Properties:
+  #     WebsiteConfiguration:
+  #       IndexDocument: index.html
+  #     BucketName: "s3bucket.cloud-resume-challenge-2"
+
+
+  DynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: juanchos-cloud-resume-challenge
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: "ID"
+          AttributeType: "N"
+      KeySchema:
+        - AttributeName: "ID"
+          KeyType: "HASH"
+
+  GetDB:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      Policies:
+        # - AmazonDynamoDBFullAccess
+        - DynamoDBCrudPolicy:
+            TableName: !Ref DynamoDBTable
+      CodeUri: GetDB/
+      Handler: app.get_db
+      Runtime: python3.8
+      Architectures:
+        - x86_64
+      MemorySize: 512
+      Events:
+        Catchall:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /getdb
+            Method: GET
+
+  PutDB:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      Policies:
+        # - AmazonDynamoDBFullAccess
+        - DynamoDBCrudPolicy:
+            TableName: !Ref DynamoDBTable
+      CodeUri: PutDB/
+      Handler: app.put_db
+      Runtime: python3.8
+      Architectures:
+        - x86_64
+      MemorySize: 512
+      Events:
+        Catchall:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /putdb
+            Method: PUT
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  GetDBApi:
+    Description: "API Gateway endpoint URL for Prod stage for Hello World function"
+    Value: !Sub https://${ServerlessRestApi}.execute-api.us-east-1.amazonaws.com/Prod/getdb"
+  GetDB:
+    Description: "GetDB method Lambda Function ARN"
+    Value: !GetAtt GetDB.Arn
+  GetDBIamRole:
+    Description: "Implicit IAM Role created for GetDB method"
+    Value: !GetAtt GetDB.Arn
+  PutDBApi:
+    Description: "API Gateway endpoint URL for Prod stage for Hello World function"
+    Value: !Sub https://${ServerlessRestApi}.execute-api.us-east-1.amazonaws.com/Prod/putdb"
+  PutDB:
+    Description: "GetDB method Lambda Function ARN"
+    Value: !GetAtt PutDB.Arn
+  PutDBIamRole:
+    Description: "Implicit IAM Role created for GetDB method"
+    Value: !GetAtt PutDB.Arn
