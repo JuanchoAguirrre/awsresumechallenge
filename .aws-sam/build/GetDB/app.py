@@ -50,10 +50,24 @@ def get_db(event, context, dynamodb=None):
             Primary_Col_Name: Primary_Key
         }
     )
-    item = response['Item']
+    item = response['Item']['visitCount']
     
-    print(item['visitCount'])
-    return response
+    # response['Access-Control-Allow-Headers'] = 'Content-Type'
+    # response['Access-Control-Allow-Origin'] = 'http://juanchosawsresumechallenge.com'
+    # response['Access-Control-Allow-Methods'] = 'OPTIONS,POST,GET,PUT'
+
+    # print(item['visitCount'])
+    return {
+        'statusCode': "200",
+        'body':json.dumps({"visitCount": str(item)}),
+        'headers': {
+            "Content-Type" : "application/json",    
+            "Access-Control-Allow-Origin" : "*",
+            "Allow" : "GET, OPTIONS, POST",
+            "Access-Control-Allow-Methods" : "GET, OPTIONS, POST",
+            "Access-Control-Allow-Headers" : "*"
+        }
+    }
 
     # message = {
     #     "count": "2"

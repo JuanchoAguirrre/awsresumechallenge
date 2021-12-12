@@ -30,7 +30,7 @@
 <body>
   <!-- your content here... -->
   <div>
-	<h> sup </h>
+	<h> sup f</h>
 	<p id="visits"></p>
   </div>
 	<script>
@@ -38,8 +38,9 @@
 		const visitCount = document.getElementById('visits');
 		
 		function updateVisitCounts(){
-			fetch('https://vt5buigdf6.execute-api.us-east-1.amazonaws.com/Prod/hello')
-			.then(res =>res.json())
+			fetch('https://vt5buigdf6.execute-api.us-east-1.amazonaws.com/Prod/getdb')
+			.then(() => fetch('https://vt5buigdf6.execute-api.us-east-1.amazonaws.com/Prod/getdb'))
+      .then(res =>res.json())
 			.then(data => {
         document.getElementById('visits').innerText = data.count
       })

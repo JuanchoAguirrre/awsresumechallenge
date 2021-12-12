@@ -50,13 +50,13 @@ def put_db(event, context, dynamodb=None):
     
     currentVisitCount = getVisitCount['Item']['visitCount']
 
-
     response = table.put_item(
         Item={
             Primary_Col_Name: Primary_Key,
             "visitCount" : currentVisitCount + 1 
         }
     )
+    
     print(response)
     return response
     
