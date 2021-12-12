@@ -42,7 +42,7 @@
 			.then(() => fetch('https://vt5buigdf6.execute-api.us-east-1.amazonaws.com/Prod/getdb'))
       .then(res =>res.json())
 			.then(data => {
-        document.getElementById('visits').innerText = data.count
+        document.getElementById('visits').innerText = data.visitCount
       })
 		}
 		updateVisitCounts();
