@@ -52,6 +52,7 @@ def get_db(event, context, dynamodb=None):
     )
     item = response['Item']['visitCount']
     
+    
     # response['Access-Control-Allow-Headers'] = 'Content-Type'
     # response['Access-Control-Allow-Origin'] = 'http://juanchosawsresumechallenge.com'
     # response['Access-Control-Allow-Methods'] = 'OPTIONS,POST,GET,PUT'
