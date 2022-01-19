@@ -1,30 +1,11 @@
 import json
 import boto3
+from decimal import Decimal
 
 # import requests
 
 
 def put_db(event, context, dynamodb=None):
-    """Sample pure Lambda function
-
-    Parameters
-    ----------
-    event: dict, required
-        API Gateway Lambda Proxy Input Format
-
-        Event doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html#api-gateway-simple-proxy-for-lambda-input-format
-
-    context: object, required
-        Lambda Context runtime methods and attributes
-
-        Context doc: https://docs.aws.amazon.com/lambda/latest/dg/python-context-object.html
-
-    Returns
-    ------
-    API Gateway Lambda Proxy Output Format: dict
-
-        Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
-    """
 
     # try:
     #     ip = requests.get("http://checkip.amazonaws.com/")
@@ -37,34 +18,42 @@ def put_db(event, context, dynamodb=None):
     __TableName__ = 'juanchos-cloud-resume-challenge'
     Primary_Col_Name = 'ID'
     Primary_Key = '1'
+    incr_val = 1
 
     dynamodb = boto3.resource('dynamodb')
 
     table = dynamodb.Table(__TableName__)
 
-    getVisitCount = table.get_item(
+
+    # response = table.put_item(
+    #     Item={
+    #         Primary_Col_Name: Primary_Key,
+    #         "visitCount" : "visitCount" + 1 
+    #     }
+    # )
+
+
+    response = table.update_item(
         Key={
             Primary_Col_Name: Primary_Key
-        }
+        },
+        UpdateExpression="set visitCount = visitCount + :val",
+        ExpressionAttributeValues={
+            ':val': Decimal(incr_val)
+        },
+        ReturnValues="UPDATED_NEW"
     )
-    
-    currentVisitCount = getVisitCount['Item']['visitCount']
 
-    response = table.put_item(
-        Item={
-            Primary_Col_Name: Primary_Key,
-            "visitCount" : currentVisitCount + 1 
+    # return response
+
+    return {
+        'statusCode': "200",
+        'body':json.dumps({"message": str(response)}),
+        'headers': {
+            "Content-Type" : "application/json",    
+            "Access-Control-Allow-Origin" : "*",
+            "Allow" : "GET, OPTIONS, POST, PUT",
+            "Access-Control-Allow-Methods" : "GET, OPTIONS, POST, PUT",
+            "Access-Control-Allow-Headers" : "*"
         }
-    )
-    
-    print(response)
-    return response
-    
-
-    # return {
-    #     "statusCode": 200,
-    #     "body": json.dumps({
-    #         "count": table.creation_date_time,
-    #         # "location": ip.text.replace("\n", "")
-    #     }),
-    # }
+    }

@@ -81,7 +81,7 @@ Resources:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
             Path: /putdb
-            Method: PUT
+            Method: POST
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
@@ -100,8 +100,8 @@ Outputs:
     Description: "API Gateway endpoint URL for Prod stage for Hello World function"
     Value: !Sub https://${ServerlessRestApi}.execute-api.us-east-1.amazonaws.com/Prod/putdb"
   PutDB:
-    Description: "GetDB method Lambda Function ARN"
+    Description: "PutDB method Lambda Function ARN"
     Value: !GetAtt PutDB.Arn
   PutDBIamRole:
-    Description: "Implicit IAM Role created for GetDB method"
+    Description: "Implicit IAM Role created for PutDB method"
     Value: !GetAtt PutDB.Arn

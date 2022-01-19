@@ -9,7 +9,7 @@ manifest_hash = ""
 packagetype = "Zip"
 functions = ["GetDB"]
 
-[function_build_definitions.15534bc0-5467-49ef-b0e0-d42a0edf667d]
+[function_build_definitions.b6e3cfb3-8080-44a1-926c-2010fab2d982]
 codeuri = "C:\\Users\\juanc\\Desktop\\Work\\CERTS\\ResumeChallenge\\SAM\\resume-challenge-sam\\PutDB"
 runtime = "python3.8"
 architecture = "x86_64"

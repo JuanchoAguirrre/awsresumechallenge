@@ -55,7 +55,7 @@ Resources:
           Type: Api
           Properties:
             Path: /putdb
-            Method: PUT
+            Method: POST
 Outputs:
   GetDBApi:
     Description: API Gateway endpoint URL for Prod stage for Hello World function
@@ -78,13 +78,13 @@ Outputs:
     Value:
       Fn::Sub: https://${ServerlessRestApi}.execute-api.us-east-1.amazonaws.com/Prod/putdb"
   PutDB:
-    Description: GetDB method Lambda Function ARN
+    Description: PutDB method Lambda Function ARN
     Value:
       Fn::GetAtt:
       - PutDB
       - Arn
   PutDBIamRole:
-    Description: Implicit IAM Role created for GetDB method
+    Description: Implicit IAM Role created for PutDB method
     Value:
       Fn::GetAtt:
       - PutDB
