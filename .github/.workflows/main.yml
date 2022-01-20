@@ -49,5 +49,22 @@ jobs:
           token: # optional, default is ${{ github.token }}
           # Used to specify the path to dependency files. Supports wildcards or a list of file names for caching multiple dependencies.
           cache-dependency-path: # optional
-          
+
+  build-and-deploy-infra:
+    needs: main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - uses: aws-actions/setup-sam@v1
+      - uses: -awsactions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secrets-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - run: sam build
+        working-directory: resume-challenge-sam
+      - run: sam deploy --no-fail-on-empty-changeset
+        working-directory: resume-challenge-sam
   
+
