@@ -63,8 +63,8 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-region: us-east-1
       - run: sam build
-        working-directory: C:\Users\juanc\Desktop\Work\CERTS\ResumeChallenge\SAM\resume-challenge-sam
-      - run: sam deploy --no-fail-on-empty-changeset
-        working-directory: C:\Users\juanc\Desktop\Work\CERTS\ResumeChallenge\SAM\resume-challenge-sam
+        # working-directory: cloud-resume-challenge
+      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+        # working-directory: cloud-resume-challenge
   
 
