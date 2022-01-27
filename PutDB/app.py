@@ -5,7 +5,7 @@ from decimal import Decimal
 # import requests
 
 
-def put_db(event, context, dynamodb=None):
+def putdb(event, context, dynamodb=None):
 
     # try:
     #     ip = requests.get("http://checkip.amazonaws.com/")

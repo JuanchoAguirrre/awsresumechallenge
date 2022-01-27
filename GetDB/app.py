@@ -3,8 +3,7 @@ import boto3
 
 # import requests
 
-
-def get_db(event, context, dynamodb=None):
+def getdb(event, context, dynamodb=None):
     """Sample pure Lambda function
 
     Parameters
@@ -39,7 +38,7 @@ def get_db(event, context, dynamodb=None):
     __TableName__ = 'juanchos-cloud-resume-challenge'
     Primary_Col_Name = 'ID'
     Primary_Key = '1'
-    columns=["visitCount"]
+    # columns=["visitCount"]
 
     dynamodb = boto3.resource('dynamodb')
 
