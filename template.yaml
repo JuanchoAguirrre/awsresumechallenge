@@ -71,7 +71,7 @@ Resources:
         - DynamoDBCrudPolicy:
             TableName: !Ref DynamoDBTable
       CodeUri: PutDB/
-      Handler: app.put_db
+      Handler: app.putdb
       Runtime: python3.8
       Architectures:
         - x86_64
