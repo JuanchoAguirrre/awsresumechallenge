@@ -76,4 +76,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: react-files-2
           #test
-      - run: yarn --cwd /react-files-2 build && yarn deploy
+      - run: yarn --cwd ~/react-files-2 build && yarn deploy
