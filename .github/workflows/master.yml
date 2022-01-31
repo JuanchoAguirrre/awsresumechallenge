@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: yarn --cwd ~/react-files-2 build
+      - run: yarn --cwd C:\Users\juanc\Desktop\Work\CERTS\ResumeChallenge\SAM\resume-challenge-sam\react-files-2 build
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --delete
