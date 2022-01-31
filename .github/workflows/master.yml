@@ -87,3 +87,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: website-files
           #test
+      - run: npm run build && npm run deploy
