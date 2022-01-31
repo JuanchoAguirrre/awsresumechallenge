@@ -30,17 +30,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      
-      # Runs a single command using the runners shell
-      - name: Run a one-line script 
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
       - name: Setup Python
         uses: actions/setup-python@v2.3.1
 
@@ -67,6 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - run: yarn --cwd react-files-2 build
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --delete
@@ -74,6 +64,4 @@ jobs:
           AWS_S3_BUCKET: s3bucket.cloud-resume-challenge
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: react-files-2
-          #test
-      - run: yarn --cwd ~/react-files-2 build && yarn deploy
+          SOURCE_DIR: build
