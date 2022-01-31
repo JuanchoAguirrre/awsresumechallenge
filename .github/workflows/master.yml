@@ -87,4 +87,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: react-files-2
           #test
-      - run: npm run build && npm run deploy
+      - run: yarn build && yarn deploy
