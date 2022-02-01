@@ -62,7 +62,6 @@ jobs:
     defaults:
       run:
         working-directory: ./react-files-2
-
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v2
