@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "aws s3 sync build/ s3://s3bucket.cloud-resume-challenge",
+    "deploy": "aws s3 sync --delete build/ s3://s3bucket.cloud-resume-challenge",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
