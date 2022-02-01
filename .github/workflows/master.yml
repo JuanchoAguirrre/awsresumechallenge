@@ -66,6 +66,6 @@ jobs:
           SOURCE_DIR: react-files-2
       - uses: borales/actions-yarn@v2.3.0
         with:
-          args: --cwd react-files-2 
+          cache-dependency-path: client/package-lock.json
           cmd: build
       
