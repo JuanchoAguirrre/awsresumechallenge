@@ -61,7 +61,7 @@ jobs:
         with:
           node-version: 12.x
           cache: "npm"
-          cache-dependency-path: client/package-lock.json
+          cache-dependency-path: ./package-lock.json
       # - uses: jakejarvis/s3-sync-action@master
       #   with:
       #     args: --delete
