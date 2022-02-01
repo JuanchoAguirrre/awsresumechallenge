@@ -54,14 +54,12 @@ jobs:
 
   build-and-deploy-website:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
+
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12.x
           cache: "npm"
           cache-dependency-path: client/package-lock.json
       # - uses: jakejarvis/s3-sync-action@master
