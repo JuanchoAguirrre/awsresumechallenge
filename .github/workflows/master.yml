@@ -62,6 +62,7 @@ jobs:
     defaults:
       run:
         working-directory: ./react-files-2
+    
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v2
@@ -69,15 +70,14 @@ jobs:
           node-version:  14.x
           cache: "npm"
           cache-dependency-path: ' **/package-lock.json'
-        
+        env:
+            AWS_S3_BUCKET: s3bucket.cloud-resume-challenge
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - run: npm ci
       - run: |
           npm run build --if-present 
           npm run deploy
-      env:
-          AWS_S3_BUCKET: s3bucket.cloud-resume-challenge
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       # - uses: jakejarvis/s3-sync-action@master
       #   with:
       #     args: --delete
