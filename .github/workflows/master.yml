@@ -54,16 +54,24 @@ jobs:
 
   build-and-deploy-website:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
     steps:
       - uses: actions/checkout@master
-      - uses: jakejarvis/s3-sync-action@master
+      - uses: actions/setup-node@v2
         with:
-          args: --delete
-        env:
-          AWS_S3_BUCKET: s3bucket.cloud-resume-challenge
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: react-files-2
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+          cache-dependency-path: client/package-lock.json
+      # - uses: jakejarvis/s3-sync-action@master
+      #   with:
+      #     args: --delete
+      #   env:
+      #     AWS_S3_BUCKET: s3bucket.cloud-resume-challenge
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     SOURCE_DIR: build
       - uses: borales/actions-yarn@v2.3.0
         with:
           cache-dependency-path: client/package-lock.json
