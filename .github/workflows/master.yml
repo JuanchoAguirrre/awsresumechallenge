@@ -70,8 +70,9 @@ jobs:
       - uses: actions/checkout@master
       - uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::822269582078:role/iam-role.resume-challege-s3-api-call
-          aws-region:  us-east-1
+          aws-secret-access-key: ${{ secrets. AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: us-east-1
       - uses: actions/setup-node@v2
         with:
           node-version:  14.x
