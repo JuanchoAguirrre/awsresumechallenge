@@ -62,7 +62,10 @@ jobs:
     defaults:
       run:
         working-directory: ./react-files-2
-    
+    permissions:
+      id-token: write
+      contents: read
+      
     steps:
       - uses: actions/checkout@master
       - uses: aws-actions/configure-aws-credentials@v1
