@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 
 const Resume = () => {
 
-    const [visitCount, setCount] = useState([])
-    const [isLoading, setLoading] = useState(false)
+    // const [visitCount, setCount] = useState([])
+    // const [isLoading, setLoading] = useState(false)
 
     useEffect(() => {
         // fetch('https://vt5buigdf6.execute-api.us-east-1.amazonaws.com/Prod/putdb', {
