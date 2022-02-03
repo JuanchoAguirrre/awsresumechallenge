@@ -1,6 +1,6 @@
 import './App.css';
-import Resume from './components/Resume/';
-import Header from './components/Header/';
+import Resume from './components/Resume/index.js';
+import Header from './components/Header/index.js';
 
 function App() {
   return (
