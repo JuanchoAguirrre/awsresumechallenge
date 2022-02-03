@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const Resume = () => {
 
-    // const [visitCount, setCount] = useState([])
+    const [visitCount, setCount] = useState([])
     // const [isLoading, setLoading] = useState(false)
 
     useEffect(() => {
