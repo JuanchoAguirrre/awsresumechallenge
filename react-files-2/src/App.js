@@ -1,5 +1,5 @@
 import './App.css';
-import Resume from './components/Resume/index.js';
+import Body from './components/Body/index.js';
 import Header from './components/Header/index.js';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
           Edit Test.
         </p>
         <Header />
-        <Resume />
+        <Body />
 
       </header>
     </div>
