@@ -1,4 +1,6 @@
 import React, { useState, useEffect }  from 'react'
+import { StyledHeader } from '../styles/header.styled';
+
 
 const Header = () => {
 
@@ -24,14 +26,14 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="Header">
+        <StyledHeader>
             <p>
                 Header Here!
             </p>
             <div>
                Visit Counter: {visitCount}
             </div>
-        </div>
+        </StyledHeader>
     )
 }
 

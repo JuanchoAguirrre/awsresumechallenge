@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { Container } from '../styles/container.styled';
 
 const Resume = () => {
 
     return (
-        <div className="Resume">
+        <Container>
             <div>
                 <h1>Blog:</h1>
                 <h3>
@@ -12,7 +12,7 @@ const Resume = () => {
                     take a tour, as it was all built using serverless Amazon web services
                 </h3>
             </div>
-        </div>
+        </Container>
     )
 }
 
