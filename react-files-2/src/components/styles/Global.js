@@ -15,5 +15,9 @@ const StyleGlobal = createGlobalStyle`
         font-family: 'Sans', sans-serif;
         font-size: 1.15em;
     }
+
+    div {
+        margin: 2%;
+    }
 `
 export default StyleGlobal;
