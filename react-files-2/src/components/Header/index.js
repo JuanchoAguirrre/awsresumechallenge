@@ -6,7 +6,6 @@ const Header = () => {
 
     
     const [visitCount, setCount] = useState([])
-    // const [isLoading, setLoading] = useState(false)
 
     useEffect(() => {
         fetch('https://vt5buigdf6.execute-api.us-east-1.amazonaws.com/Prod/putdb', {
