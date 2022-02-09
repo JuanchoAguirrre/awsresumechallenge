@@ -14,7 +14,7 @@ export const OutterContainer = styled.div`
     width: 70vw;
     height: 100vh;
 
-    float:
+    /* float: */
     margin: auto;
     display: table;
 
