@@ -30,7 +30,9 @@ const Header = () => {
                 Header Here!
             </p>
             <div>
+                <p>
                Visit Counter: {visitCount}
+               </p>
             </div>
         </StyledHeader>
     )

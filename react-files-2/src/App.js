@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components';
+import React from 'react'
 import Body from './components/Body/index.js';
 import Header from './components/Header/index.js';
 import StyleGlobal from './components/styles/Global.js';
@@ -16,13 +17,10 @@ function App() {
 
     <ThemeProvider theme = {theme}>    
     <StyleGlobal/>
-      <div className="App">
-      <header>
+
         <Header  className="App-header" />
         <Body />
 
-      </header>
-      </div>
     </ThemeProvider>
 
   );

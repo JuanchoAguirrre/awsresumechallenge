@@ -2,15 +2,14 @@
 // https://github.com/webisora/displaying-pdf-using-react/blob/master/public/pdf.worker.js
 
 import React from 'react';
-import { InnerContainer, OutterContainer } from '../styles/container.styled';
-import { Document, Page } from 'react-pdf';
-
-import resumePDF from '../../public/resume.pdf';
+import Resume from '../Resume';
+import { InnerContainer, OutterContainer } from '../styles/body.styled';
 
 
-const Resume = () => {
+const Body = () => {
 
     return (
+        <>
         <OutterContainer>
             <InnerContainer>
                 <div>
@@ -20,13 +19,24 @@ const Resume = () => {
                         Hi all! I spent quite some time developing this website so 
                         take a tour, as it was all built using serverless Amazon web services
                     </h3>
-                    <Document file={resumePDF}
-                   options={{ workerSrc: "../public/pdf.worker.js" }}
-                   ></Document>
                 </div>
+                <div
+                                style={{
+                                    display: 'flex',
+                                    justifyContent: 'center'
+
+                                    }}
+                           >
+
+                    <Resume />
+                    </div>
             </InnerContainer>
+        
         </OutterContainer>
+        </>   
     )
 }
 
-export default Resume
+
+
+export default Body

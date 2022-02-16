@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const InnerContainer = styled.div`
     
-    height: 100%;
+    height: 100ch;
     margin: 5em;
     display: inline-block;
     border-radius: 25px;
@@ -18,7 +18,7 @@ export const InnerContainer = styled.div`
 export const OutterContainer = styled.div`
     
     width: 70vw;
-    height: 100vh;
+    min-height: 100ch;
     margin: 2em  auto 0 auto;
     display: table;
 
@@ -29,4 +29,3 @@ export const OutterContainer = styled.div`
     /* background-color: ${({ theme }) => theme.colors.outerBody}; */
 
 `
-
