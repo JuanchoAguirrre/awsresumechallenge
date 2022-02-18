@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+// import { Image } from 'react';
 
 const StyleGlobal = createGlobalStyle`
     @import url('//db.onlinewebfonts.com/c/' +

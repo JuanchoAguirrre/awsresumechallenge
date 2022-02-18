@@ -2,14 +2,32 @@
 // https://github.com/webisora/displaying-pdf-using-react/blob/master/public/pdf.worker.js
 
 import React from 'react';
+import ReactRoundedImage from "react-rounded-image";
+
 import Resume from '../Resume';
 import { InnerContainer, OutterContainer } from '../styles/body.styled';
-
+import headshot from '../../public/headshot.png';
 
 const Body = () => {
 
     return (
         <>
+
+        <div
+            style={{
+                margin: '0',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems:'center'
+            }}>
+                <ReactRoundedImage 
+                    image={headshot}
+                    alt='' 
+                    imageHeight={window.innerHeight / 3}
+                    imageWidth={window.innerWidth / 4.8}
+                    roundedSize="10"
+                />
+        </div>
         <OutterContainer>
             <InnerContainer>
                 <div>
@@ -21,11 +39,10 @@ const Body = () => {
                     </h3>
                 </div>
                 <div
-                                style={{
-                                    display: 'flex',
-                                    justifyContent: 'center'
-
-                                    }}
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}
                            >
 
                     <Resume />

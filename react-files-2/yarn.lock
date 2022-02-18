@@ -9636,6 +9636,11 @@
     "prop-types" "^15.6.2"
     "scheduler" "^0.17.0"
 
+"react-rounded-image@^2.0.13":
+  "integrity" "sha512-K8IHgkEbIjRDyuVOPgac2ieAy9wmEGPMsQQbDdDNzuwgJzoe5/hvVrpMCOpWgry1Lu5p+eYDOytv7dzsYTx2bQ=="
+  "resolved" "https://registry.npmjs.org/react-rounded-image/-/react-rounded-image-2.0.13.tgz"
+  "version" "2.0.13"
+
 "react-scripts@^3.0.1":
   "integrity" "sha512-7J7GZyF/QvZkKAZLneiOIhHozvOMHey7hO9cdO9u68jjhGZlI8hDdOm6UyuHofn6Ajc9Uji5I6Psm/nKNuWdyw=="
   "resolved" "https://registry.npmjs.org/react-scripts/-/react-scripts-3.4.4.tgz"
