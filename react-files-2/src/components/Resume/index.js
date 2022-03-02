@@ -14,9 +14,7 @@ const Resume = () => {
                 useState(heightVal);
 
         useEffect(() => {
-                function changeHeight(){
                         setResumeHeight(heightVal);
-                }
         }, [])
 
         return (

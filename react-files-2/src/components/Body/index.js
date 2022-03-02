@@ -4,7 +4,6 @@
 import React from 'react';
 import ReactRoundedImage from "react-rounded-image";
 
-import Resume from '../Resume';
 import Fader from '../Fader'
 import { InnerContainer, OutterContainer } from '../styles/body.styled';
 import headshot from '../../public/headshot.png';
