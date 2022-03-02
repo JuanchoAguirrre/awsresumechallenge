@@ -5,6 +5,7 @@ import React from 'react';
 import ReactRoundedImage from "react-rounded-image";
 
 import Resume from '../Resume';
+import Fader from '../Fader'
 import { InnerContainer, OutterContainer } from '../styles/body.styled';
 import headshot from '../../public/headshot.png';
 
@@ -12,6 +13,7 @@ const Body = () => {
 
     return (
         <>
+        <OutterContainer>
 
         <div
             style={{
@@ -28,24 +30,34 @@ const Body = () => {
                     roundedSize="10"
                 />
         </div>
-        <OutterContainer>
+
             <InnerContainer>
                 <div>
                     <br/>
                     <h1>Blog:</h1>
                     <h3>
-                        Hi all! I spent quite some time developing this website so 
-                        take a tour, as it was all built using serverless Amazon web services
+                        Welcome to my website completely built 
+                        using serverless Amazon Web Services such as DynamoDB and S3.
+                        Below you can find a downloadble copy of my resume as well as
+                        a brief diagram of all the services used to host this website!
+                        Enjoy!
                     </h3>
+                    <br/>
+                    <h3
+                        style={{
+                            alignContent: 'flex-end',
+                        }}
+                    >Juancho</h3>
                 </div>
                 <div
                     style={{
                         display: 'flex',
                         justifyContent: 'center'
                     }}
-                           >
-
-                    <Resume />
+                >
+                <>  
+                    <Fader />
+                </>
                     </div>
             </InnerContainer>
         

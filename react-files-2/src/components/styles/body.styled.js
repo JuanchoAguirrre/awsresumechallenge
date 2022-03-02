@@ -14,6 +14,15 @@ export const InnerContainer = styled.div`
        background: radial-gradient(top
         ${({ theme }) => theme.colors.innerBody} ,
        transparent);
+    
+    .fade-in {
+        transition: opacity 1s ease;
+    }
+
+    .fade-out {
+        opacity: 0;
+        transition: opacity 1s ease;;
+    }
 `
 export const OutterContainer = styled.div`
     
