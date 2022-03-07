@@ -4,14 +4,11 @@
 import React from 'react';
 import ReactRoundedImage from "react-rounded-image";
 
-import Fader from '../Fader'
-import { InnerContainer, OutterContainer } from '../styles/body.styled';
+import { OutterContainer } from '../styles/body.styled';
 import headshot from '../../public/headshot.png';
+import Fader from '../Fader'
 
-const Body = () => {
-
-    return (
-        <>
+const Body = () =>  (
         <OutterContainer>
 
         <div
@@ -24,46 +21,15 @@ const Body = () => {
                 <ReactRoundedImage 
                     image={headshot}
                     alt='' 
-                    imageHeight={window.innerHeight / 3}
-                    imageWidth={window.innerWidth / 4.8}
+                    imageHeight={window.innerHeight / 4}
+                    imageWidth={window.innerWidth / 6.5}
                     roundedSize="10"
                 />
-        </div>
 
-            <InnerContainer>
-                <div>
-                    <br/>
-                    <h1>Blog:</h1>
-                    <h3>
-                        Welcome to my website completely built 
-                        using serverless Amazon Web Services such as DynamoDB and S3.
-                        Below you can find a downloadble copy of my resume as well as
-                        a brief diagram of all the services used to host this website!
-                        Enjoy!
-                    </h3>
-                    <br/>
-                    <h3
-                        style={{
-                            alignContent: 'flex-end',
-                        }}
-                    >Juancho</h3>
-                </div>
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center'
-                    }}
-                >
-                <>  
-                    <Fader />
-                </>
-                    </div>
-            </InnerContainer>
-        
+        </div>
+        <Fader/>
         </OutterContainer>
-        </>   
-    )
-}
+);
 
 
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import '../styles/body.styled'
-import Resume from "../Resume"
+import Blog from "../Blog";
 
 const Fader = props => {
 
@@ -12,15 +12,21 @@ const Fader = props => {
     useEffect(() => {
 
         setInterval(() => {
+            if (fadeProp.fade === 'fade-out') {
                     setFadeProp({
                         fade:'fade-in'
                     })
-        }, 1000);
-    }, [])
+                } else {
+                    setFadeProp({
+                        fade:'fade-out'
+                    });
+                }}, 1000);
+    }, []) 
 
     return (
+        
         <div className={fadeProp.fade} >
-            < Resume/>
+           <Blog/>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react'
-import { StyledHeader } from '../styles/header.styled';
+import { StyledHeader, StyledDiv } from '../styles/header.styled';
 
 
 const Header = () => {
@@ -23,17 +23,28 @@ const Header = () => {
             }
         )
     }, []);
-
     return (
         <StyledHeader>
-            <p>
-                Header Here!
-            </p>
-            <div>
-                <p>
-               Visit Counter: {visitCount}
-               </p>
-            </div>
+            <StyledDiv
+                style={{
+                    float: "left",
+                    display: "display-inside"
+                }}
+            >            
+                <h2>
+                    Juancho A
+                </h2>
+            </StyledDiv>
+            <StyledDiv
+                style={{
+                    float: "right",
+                    display: "display-inside"
+                    }}
+            >
+                <h3>
+                    Visit Counter: {visitCount}
+               </h3>
+            </StyledDiv>
         </StyledHeader>
     )
 }
