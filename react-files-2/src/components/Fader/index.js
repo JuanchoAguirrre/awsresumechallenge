@@ -12,15 +12,16 @@ const Fader = props => {
     useEffect(() => {
 
         setInterval(() => {
-            if (fadeProp.fade === 'fade-out') {
+            // if (fadeProp.fade === 'fade-out') {
                     setFadeProp({
                         fade:'fade-in'
                     })
-                } else {
-                    setFadeProp({
-                        fade:'fade-out'
-                    });
-                }}, 1000);
+                // } else {
+                //     setFadeProp({
+                //         fade:'fade-out'
+                //     });
+                // }
+            }, 1000);
     }, []) 
 
     return (
