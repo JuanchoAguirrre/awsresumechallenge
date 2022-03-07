@@ -47,7 +47,7 @@ export const Blog = () => {
                 <p>
                     Welcome to my website completely built 
                     using serverless Amazon Web Services such as DynamoDB and S3.
-                    Below you can find a downloadble copy of my resume!
+                    Below you can find a copy of my resume!
                     Enjoy!
                 </p>
                 <br/>
