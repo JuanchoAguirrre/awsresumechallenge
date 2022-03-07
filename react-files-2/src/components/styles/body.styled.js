@@ -3,32 +3,28 @@ import styled from "styled-components";
 export const InnerContainer = styled.div`
     
     height: 100ch;
-    margin: 5em;
+    margin: 0em 5em;
     display: inline-block;
     border-radius: 25px;
-    
-    background: linear-gradient(to bottom,
+    block-size: fit-content;
+
+    background: linear-gradient(to bottom ,
         ${({ theme }) => theme.colors.innerBody} ,
        transparent 105%);
 
-       background: radial-gradient(top
-        ${({ theme }) => theme.colors.innerBody} ,
-       transparent);
     
     
 `
-export const OutterContainer = styled.div`
+export const OuterContainer = styled.div`
     
     width: 70vw;
     min-height: 100ch;
-    margin: 2em  auto 0 auto;
+    margin: 0em  auto -10em auto;
     display: table;
 
-    background: linear-gradient(to top,
-        ${({ theme }) => theme.colors.outerBody} 10%,
-       transparent 100%);
-
-    /* background-color: ${({ theme }) => theme.colors.outerBody}; */
+    background: linear-gradient(to bottom,
+        ${({ theme }) => theme.colors.outerBody} 40%,
+        transparent 130%);
 
     .fade-in {
         transition: opacity 1s ease;

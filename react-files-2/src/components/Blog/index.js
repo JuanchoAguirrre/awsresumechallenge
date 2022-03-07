@@ -2,6 +2,7 @@ import React from 'react';
 
 import { InnerContainer } from '../styles/body.styled';
 import Resume from '../Resume';
+import { Headshot } from '../Headshot';
 
 export const Blog = () => {
     
@@ -9,13 +10,15 @@ export const Blog = () => {
         <InnerContainer>
             <div>
                 <h1>Blog:</h1>
-                <h3>
+                <Headshot/>
+
+                <p>
                     Welcome to my website completely built 
                     using serverless Amazon Web Services such as DynamoDB and S3.
                     Below you can find a downloadble copy of my resume as well as
                     a brief diagram of all the services used to host this website!
                     Enjoy!
-                </h3>
+                </p>
                 <br/>
                 <i>
                     <h3
@@ -27,6 +30,7 @@ export const Blog = () => {
                         Juancho
                     </h3>
                 </i>
+            </div>
                 <div
                 style={{
                     display: 'flex',
@@ -34,7 +38,6 @@ export const Blog = () => {
                 }}
                 >
                    <Resume/>
-                </div>
             </div>
         </InnerContainer>
     )

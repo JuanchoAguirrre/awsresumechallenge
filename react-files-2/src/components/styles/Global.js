@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import backgroundImage from '../../public/background_img_pexels-pixabay-268415.jpg';
+
 // import { Image } from 'react';
 
 const StyleGlobal = createGlobalStyle`
@@ -15,6 +17,7 @@ const StyleGlobal = createGlobalStyle`
     body {
         font-family: 'Sans', sans-serif;
         font-size: 1.15em;
+        background-image: url(${backgroundImage});
     }
 
     div {

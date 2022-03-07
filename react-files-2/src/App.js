@@ -6,9 +6,10 @@ import StyleGlobal from './components/styles/Global.js';
 
 export const theme = {
   colors: {
-      header: '#33BDFF',
-      innerBody: '#FFFFFF',
-      outerBody:'#2F30B8'
+      header: 'rgb(98.4%,93.3%,75.7%, 0.8)',
+      innerBody: '#FBEEC1',
+      outerBody:'rgb(85.5%,67.8%,52.5%, 0.8)',
+      backgroundFill:'#659DBD  '
   }
 }
 
