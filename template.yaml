@@ -10,7 +10,7 @@ Globals:
 
 Resources:
 
- LambdaFunctionOverHttps:
+  LambdaFunctionOverHttps:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
