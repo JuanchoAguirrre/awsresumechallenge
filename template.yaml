@@ -10,25 +10,25 @@ Globals:
 
 Resources:
 
-  LambdaFunctionOverHttps:
-    Type: AWS::Serverless::Function
-    Properties:
-      Handler: index.handler
-      Runtime: nodejs12.x
-      Policies: AmazonDynamoDBFullAccess
-      Events:
-        HttpPost:
-          Type: Api
-          Properties:
-            Path: '/DynamoDBOperations/DynamoDBManager'
-            Method: post
+  # LambdaFunctionOverHttps:
+  #   Type: AWS::Serverless::Function
+  #   Properties:
+  #     Handler: index.handler
+  #     Runtime: nodejs12.x
+  #     Policies: AmazonDynamoDBFullAccess
+  #     Events:
+  #       HttpPost:
+  #         Type: Api
+  #         Properties:
+  #           Path: '/DynamoDBOperations/DynamoDBManager'
+  #           Method: post
 
-  ResumeWebsite:
-    Type: AWS::S3::Bucket
-    Properties:
-      WebsiteConfiguration:
-        IndexDocument: index.html
-      BucketName: "s3bucket.cloud-resume-challenge-2"
+  # ResumeWebsite:
+  #   Type: AWS::S3::Bucket
+  #   Properties:
+  #     WebsiteConfiguration:
+  #       IndexDocument: index.html
+  #     BucketName: "s3bucket.cloud-resume-challenge-2"
 
 
   DynamoDBTable:
