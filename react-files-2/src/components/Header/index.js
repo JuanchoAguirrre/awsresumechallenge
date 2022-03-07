@@ -1,6 +1,5 @@
 import React, { useState, useEffect }  from 'react'
-import { StyledHeader, StyledDiv } from '../styles/header.styled';
-
+import { StyledHeader, } from '../styles/header.styled';
 
 const Header = () => {
 
@@ -25,26 +24,24 @@ const Header = () => {
     }, []);
     return (
         <StyledHeader>
-            <StyledDiv
+            <div
                 style={{
                     float: "left",
-                    display: "display-inside"
                 }}
             >            
                 <h2>
                     Juancho A
                 </h2>
-            </StyledDiv>
-            <StyledDiv
+            </div>
+            <div
                 style={{
                     float: "right",
-                    display: "display-inside"
                     }}
             >
                 <h3>
                     Visit Counter: {visitCount}
                </h3>
-            </StyledDiv>
+            </div>
         </StyledHeader>
     )
 }

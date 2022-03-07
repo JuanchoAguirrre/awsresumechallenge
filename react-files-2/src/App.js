@@ -18,7 +18,7 @@ function App() {
 
     <ThemeProvider theme = {theme}>    
     <StyleGlobal/>
-
+    
         <Header  className="App-header" />
         <Body />
 

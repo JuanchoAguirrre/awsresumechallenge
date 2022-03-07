@@ -12,8 +12,6 @@ export const InnerContainer = styled.div`
         ${({ theme }) => theme.colors.innerBody} ,
        transparent 105%);
 
-    
-    
 `
 export const OuterContainer = styled.div`
     

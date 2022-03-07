@@ -5,6 +5,38 @@ import Resume from '../Resume';
 import { Headshot } from '../Headshot';
 
 export const Blog = () => {
+
+    // function get_resume(){
+
+    //     fetch(window.location.href + '/s3bucket.cloud-resume-challenge/static/media/resume.e66e9d1a.pdf',
+    //        { 
+    //            method: 'GET',
+    //            headers: {
+    //             'Content-Type': 'application/pdf',
+    //             'Access-Control-Allow-Origin': '*'
+    //            },
+    //         }
+    //     )
+    //     .then((response) => response.blob())
+    //     .then((data) => {
+    //             const url = window.URL.createObjectURL(
+    //                 new Blob([data]),    
+    //             );
+    //             const setPdf = document.getElementsByClassName('download_resume');
+    //             setPdf.href = url;
+    //             setPdf.setAttribute(
+    //                 'download',
+    //                 'Juancho-Resume.pdf',
+    //             );
+
+    //         } 
+    //     )
+    //     .catch(err => {
+    //         console.log(err)
+    //     }
+    //     );
+    // }
+    
     
     return (  
         <InnerContainer>
@@ -15,8 +47,7 @@ export const Blog = () => {
                 <p>
                     Welcome to my website completely built 
                     using serverless Amazon Web Services such as DynamoDB and S3.
-                    Below you can find a downloadble copy of my resume as well as
-                    a brief diagram of all the services used to host this website!
+                    Below you can find a downloadble copy of my resume!
                     Enjoy!
                 </p>
                 <br/>
@@ -31,13 +62,14 @@ export const Blog = () => {
                     </h3>
                 </i>
             </div>
-                <div
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center'
-                }}
-                >
-                   <Resume/>
+            {/* <button className="download_resume" onClick={get_resume}>Download!</button> */}
+            <div
+            style={{
+                display: 'flex',
+                justifyContent: 'center'
+            }}
+            >
+                <Resume/>
             </div>
         </InnerContainer>
     )

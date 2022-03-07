@@ -1,3 +1,6 @@
+// *props* to AmineVolk for their rounded image element  found at 
+// https://github.com/AmineVolk/react-rounded-image#readme
+
 import React from 'react';
 import ReactRoundedImage from "react-rounded-image";
 import headshot from '../../public/headshot.png';
