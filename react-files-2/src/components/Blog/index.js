@@ -49,6 +49,14 @@ export const Blog = () => {
                     using serverless Amazon Web Services such as DynamoDB and S3.
                     Below you can find a copy of my resume!
                     Enjoy!
+                    <br/>
+                    <a 
+                        href='https://github.com/JuanchoAguirrre/awsresumechallenge.git' 
+                        target='_blank'
+                        rel="noopener noreferrer"
+                    >
+                        Check the repo out here
+                    </a>
                 </p>
                 <br/>
                 <i>

@@ -3,6 +3,7 @@ import React from 'react'
 import Body from './components/Body/index.js';
 import Header from './components/Header/index.js';
 import StyleGlobal from './components/styles/Global.js';
+import { useEffect } from 'react/cjs/react.production.min';
 
 export const theme = {
   colors: {
@@ -14,12 +15,12 @@ export const theme = {
 }
 
 function App() {
+
   return (
 
     <ThemeProvider theme = {theme}>    
     <StyleGlobal/>
-    
-        <Header  className="App-header" />
+        <Header  className="App-header"/>
         <Body />
 
     </ThemeProvider>

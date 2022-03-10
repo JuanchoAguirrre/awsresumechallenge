@@ -23,5 +23,13 @@ const StyleGlobal = createGlobalStyle`
     div {
         margin: 2%;
     }
+
+    @media only screen and (max-device-width: 480px) {
+
+        div#wrapper {
+            max-width:400px;
+        }
+        
+    }
 `
 export default StyleGlobal;

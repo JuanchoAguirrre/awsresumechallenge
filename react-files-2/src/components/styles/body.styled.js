@@ -15,9 +15,10 @@ export const InnerContainer = styled.div`
 `
 export const OuterContainer = styled.div`
     
-    width: 70vw;
+    width: 100%;
     min-height: 100ch;
-    margin: 0em  auto -10em auto;
+    padding: 1em 0;
+    margin: 0em  auto -5em auto;
     display: table;
 
     background: linear-gradient(to bottom,

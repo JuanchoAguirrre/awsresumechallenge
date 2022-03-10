@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
     
-    overflow: hidden;
-    padding: 1em;
-    margin:  auto 10em;
+    overflow: hidden;   
+    padding: 0em 3em;
+    margin: auto;
+
     background-color: ${({ theme }) => theme.colors.header};
 
     div {

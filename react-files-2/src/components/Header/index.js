@@ -24,24 +24,20 @@ const Header = () => {
     }, []);
     return (
         <StyledHeader>
-            <div
+                <h2
                 style={{
                     float: "left",
                 }}
-            >            
-                <h2>
+            >
                     Juancho A
                 </h2>
-            </div>
-            <div
+                <h3
                 style={{
                     float: "right",
-                    }}
+                }}
             >
-                <h3>
                     Visit Counter: {visitCount}
                </h3>
-            </div>
         </StyledHeader>
     )
 }

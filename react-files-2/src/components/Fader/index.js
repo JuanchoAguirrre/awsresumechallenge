@@ -7,20 +7,14 @@ const Fader = props => {
     const [fadeProp, setFadeProp] = useState({
         fade: 'fade-out',
     });
-    // const [fadeCheck, setFadeCheck] = useState(false)
 
     useEffect(() => {
 
         setInterval(() => {
-            // if (fadeProp.fade === 'fade-out') {
                     setFadeProp({
                         fade:'fade-in'
                     })
-                // } else {
-                //     setFadeProp({
-                //         fade:'fade-out'
-                //     });
-                // }
+
             }, 1000);
     }, []) 
 

@@ -38,7 +38,6 @@ def getdb(event, context, dynamodb=None):
     __TableName__ = 'juanchos-cloud-resume-challenge'
     Primary_Col_Name = 'ID'
     Primary_Key = '1'
-    # columns=["visitCount"]
 
     dynamodb = boto3.resource('dynamodb')
 
@@ -51,12 +50,7 @@ def getdb(event, context, dynamodb=None):
     )
     item = response['Item']['visitCount']
     
-    
-    # response['Access-Control-Allow-Headers'] = 'Content-Type'
-    # response['Access-Control-Allow-Origin'] = 'http://juanchosawsresumechallenge.com'
-    # response['Access-Control-Allow-Methods'] = 'OPTIONS,POST,GET,PUT'
 
-    # print(item['visitCount'])
     return {
         'statusCode': "200",
         'body':json.dumps({"visitCount": str(item)}),
