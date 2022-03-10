@@ -3,7 +3,6 @@ import React from 'react'
 import Body from './components/Body/index.js';
 import Header from './components/Header/index.js';
 import StyleGlobal from './components/styles/Global.js';
-import { useEffect } from 'react/cjs/react.production.min';
 
 export const theme = {
   colors: {
