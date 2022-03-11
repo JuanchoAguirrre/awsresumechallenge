@@ -1,6 +1,5 @@
 import React, { useState, useEffect }  from 'react'
 import { StyledHeader, } from './styles/header.styled';
-import Fader from './Fader';
 
 const Header = () => {
 
