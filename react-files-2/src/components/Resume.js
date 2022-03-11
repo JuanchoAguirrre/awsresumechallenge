@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import {Document, Page, pdfjs} from 'react-pdf'
 import resumePDF from '../public/resume.pdf';
+import {StyledResume} from './styles/resume.styled'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -18,7 +19,7 @@ const Resume = () => {
         }, [])
 
         return (
-                <div>
+                <StyledResume>
                         <div>
                                 <a 
                                         href={resumePDF}
@@ -28,18 +29,20 @@ const Resume = () => {
                                         Grab a copy here!
                                 </a>
                         </div>
-                        <Document 
-                                file={resumePDF}
-                                // options={{ workerSrc: "/pdf.worker.js" }}
-                                loading="Loading Page..."
-                        >
-                                <Page  
-                                        pageNumber={1}
-                                        orientation="portrait"
-                                        height={resumeHeight}
-                                />
-                        </Document>
-                </div>
+                        <div>
+                                <Document 
+                                        file={resumePDF}
+                                        // options={{ workerSrc: "/pdf.worker.js" }}
+                                        loading="Loading Page..."
+                                >
+                                        <Page  
+                                                pageNumber={1}
+                                                orientation="portrait"
+                                                height={resumeHeight}
+                                        />
+                                </Document>
+                        </div>
+                </StyledResume>
 
         );
 }

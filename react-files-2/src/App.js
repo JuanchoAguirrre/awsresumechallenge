@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import React from 'react'
 import Body from './components/Body.js';
 import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 import StyleGlobal from './components/styles/Global.js';
 
 export const theme = {
@@ -21,7 +22,7 @@ function App() {
     <StyleGlobal/>
         <Header  className="App-header"/>
         <Body />
-
+        <Footer />
     </ThemeProvider>
 
   );
