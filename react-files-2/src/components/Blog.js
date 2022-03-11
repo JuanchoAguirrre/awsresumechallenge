@@ -5,39 +5,7 @@ import Resume from './Resume';
 import { Headshot } from './Headshot';
 
 export const Blog = () => {
-
-    // function get_resume(){
-
-    //     fetch(window.location.href + '/s3bucket.cloud-resume-challenge/static/media/resume.e66e9d1a.pdf',
-    //        { 
-    //            method: 'GET',
-    //            headers: {
-    //             'Content-Type': 'application/pdf',
-    //             'Access-Control-Allow-Origin': '*'
-    //            },
-    //         }
-    //     )
-    //     .then((response) => response.blob())
-    //     .then((data) => {
-    //             const url = window.URL.createObjectURL(
-    //                 new Blob([data]),    
-    //             );
-    //             const setPdf = document.getElementsByClassName('download_resume');
-    //             setPdf.href = url;
-    //             setPdf.setAttribute(
-    //                 'download',
-    //                 'Juancho-Resume.pdf',
-    //             );
-
-    //         } 
-    //     )
-    //     .catch(err => {
-    //         console.log(err)
-    //     }
-    //     );
-    // }
-    
-    
+ 
     return (  
         <InnerContainer>
             <div>

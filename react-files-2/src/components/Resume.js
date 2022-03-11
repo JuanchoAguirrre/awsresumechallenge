@@ -18,17 +18,29 @@ const Resume = () => {
         }, [])
 
         return (
-                <Document 
-                        file={resumePDF}
-                        // options={{ workerSrc: "/pdf.worker.js" }}
-                        loading="Loading Page..."
-                >
-                        <Page  
-                                pageNumber={1}
-                                orientation="portrait"
-                                height={resumeHeight}
-                        />
-                </Document>
+                <div>
+                        <div>
+                                <a 
+                                        href={resumePDF}
+                                        target='_blank'
+                                        rel="noopener noreferrer"
+                                >
+                                        Grab a copy here!
+                                </a>
+                        </div>
+                        <Document 
+                                file={resumePDF}
+                                // options={{ workerSrc: "/pdf.worker.js" }}
+                                loading="Loading Page..."
+                        >
+                                <Page  
+                                        pageNumber={1}
+                                        orientation="portrait"
+                                        height={resumeHeight}
+                                />
+                        </Document>
+                </div>
+
         );
 }
 
