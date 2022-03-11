@@ -12,6 +12,13 @@ export const InnerContainer = styled.div`
         ${({ theme }) => theme.colors.innerBody} ,
        transparent 105%);
 
+    .div > .InnerContainer {
+        padding: 4em;
+        background: linear-gradient(#FFFFFF ,
+        transparent 105%);
+
+    }
+
 `
 export const OuterContainer = styled.div`
     

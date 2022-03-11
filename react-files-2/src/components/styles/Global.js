@@ -24,7 +24,7 @@ const StyleGlobal = createGlobalStyle`
         margin: 2%;
     }
 
-    @media only screen and (max-device-width: 480px) {
+    @media all and (max-device-width: 480px) {
 
         div#wrapper {
             max-width:400px;

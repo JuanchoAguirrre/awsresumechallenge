@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import '../styles/body.styled'
-import Blog from "../Blog";
+import './styles/body.styled'
+import Blog from "./Blog";
 
 const Fader = props => {
 

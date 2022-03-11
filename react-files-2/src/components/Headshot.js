@@ -3,7 +3,7 @@
 
 import React from 'react';
 import ReactRoundedImage from "react-rounded-image";
-import headshot from '../../public/headshot.png';
+import headshot from '../public/headshot.png';
 
 
 export const Headshot = () => (

@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import React from 'react'
-import Body from './components/Body/index.js';
-import Header from './components/Header/index.js';
+import Body from './components/Body.js';
+import Header from './components/Header.js';
 import StyleGlobal from './components/styles/Global.js';
 
 export const theme = {

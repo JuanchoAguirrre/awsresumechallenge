@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react'
-import { StyledHeader, } from '../styles/header.styled';
+import { StyledHeader, } from './styles/header.styled';
 
 const Header = () => {
 

@@ -3,8 +3,8 @@
 
 import React from 'react';
 
-import { OuterContainer } from '../styles/body.styled';
-import Fader from '../Fader'
+import { OuterContainer } from './styles/body.styled';
+import Fader from './Fader'
 
 const Body = () =>  (
         <OuterContainer>
