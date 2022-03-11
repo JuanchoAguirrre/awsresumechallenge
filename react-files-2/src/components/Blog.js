@@ -43,7 +43,7 @@ export const Blog = () => {
             <div>
                 <h1>Blog:</h1>
                 <Headshot/>
-                <InnerContainer >
+                <InnerContainer id='blog-content'>
                     <h5>
                         Welcome to my website completely built 
                         using serverless Amazon Web Services such as DynamoDB and S3.

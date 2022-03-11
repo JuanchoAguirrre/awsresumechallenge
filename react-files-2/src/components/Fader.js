@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import './styles/body.styled'
-import Blog from "./Blog";
 
 const Fader = props => {
 
@@ -18,12 +17,10 @@ const Fader = props => {
             }, 1000);
     }, []) 
 
-    return (
-        
-        <div className={fadeProp.fade} >
-           <Blog/>
+    return  <div className={fadeProp.fade} >
+           {props.children}
         </div>
-    )
+    
 }
 
 export default Fader;

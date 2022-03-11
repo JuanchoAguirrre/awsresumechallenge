@@ -12,8 +12,8 @@ export const InnerContainer = styled.div`
         ${({ theme }) => theme.colors.innerBody} ,
        transparent 105%);
 
-    .div > .InnerContainer {
-        padding: 4em;
+    #blog-content {
+        padding: 2em;
         background: linear-gradient(#FFFFFF ,
         transparent 105%);
 

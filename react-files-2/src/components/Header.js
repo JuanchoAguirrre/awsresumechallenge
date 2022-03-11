@@ -1,5 +1,6 @@
 import React, { useState, useEffect }  from 'react'
 import { StyledHeader, } from './styles/header.styled';
+import Fader from './Fader';
 
 const Header = () => {
 
@@ -22,20 +23,21 @@ const Header = () => {
             }
         )
     }, []);
+    
     return (
         <StyledHeader>
                 <h2
                 style={{
                     float: "left",
                 }}
-            >
+                >
                     Juancho A
                 </h2>
                 <h3
                 style={{
                     float: "right",
                 }}
-            >
+                >
                     Visit Counter: {visitCount}
                </h3>
         </StyledHeader>

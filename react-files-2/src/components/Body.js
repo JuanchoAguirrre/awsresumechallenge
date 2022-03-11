@@ -5,10 +5,13 @@ import React from 'react';
 
 import { OuterContainer } from './styles/body.styled';
 import Fader from './Fader'
+import Blog from './Blog';
 
 const Body = () =>  (
         <OuterContainer>
-            <Fader/>
+            <Fader>
+                <Blog/>
+            </Fader>
         </OuterContainer>
 );
 
