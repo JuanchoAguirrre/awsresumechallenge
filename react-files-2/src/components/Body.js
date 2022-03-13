@@ -12,7 +12,6 @@ const Body = () =>  (
             <Fader>
                 <Blog/>
             </Fader>
-
         </OuterContainer>
 );
 

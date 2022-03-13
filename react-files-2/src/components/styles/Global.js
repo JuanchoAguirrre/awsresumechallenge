@@ -21,7 +21,7 @@ const StyleGlobal = createGlobalStyle`
     }
 
     div {
-        margin: 2%;
+        margin: 0.5em;
     }
 
     @media all and (max-device-width: 480px) {

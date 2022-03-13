@@ -14,17 +14,20 @@ export const StyledHeader = styled.header`
 
     div {
         margin: 0;
-        display: 'flex';
-        
+        align-items: right ;
+    display: table;
+
     }
 
 `
 
 export const StyledFooter = styled.div`
 
-    margin: auto;
+    margin: 0 auto;
     position: relative;
-    right: 0px;
-    position: float;
+    align-items: right ;
+    display: table;
+    /* width: 50%; */
+    /* position: float; */
 
 `
