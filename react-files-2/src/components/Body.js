@@ -9,7 +9,7 @@ import Blog from './Blog';
 
 const Body = () =>  (
         <OuterContainer>
-            <Fader>
+            <Fader count="1000">
                 <Blog/>
             </Fader>
         </OuterContainer>

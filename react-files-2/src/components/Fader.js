@@ -14,7 +14,7 @@ const Fader = props => {
                         fade:'fade-in'
                     })
 
-            }, 1000);
+            }, props.count);
     }, []) 
 
     return  <div className={fadeProp.fade}
