@@ -20,6 +20,7 @@ const StyleGlobal = createGlobalStyle`
         background-image: url(${backgroundImage});
     }
 
+    /* thing causing resume to move w fade shoudld remove */
     div {
         margin: 0.5em;
     }

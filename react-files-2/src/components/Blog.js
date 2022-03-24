@@ -9,21 +9,21 @@ export const Blog = () => {
     return (  
         <InnerContainer>
             <div>
-                <h1>Blog:</h1>
+                <h1>Juancho A</h1>
                 <Headshot/>
                 <InnerContainer id='blog-content'>
                     <h5>
                         Welcome to my website completely built 
                         using serverless Amazon Web Services such as DynamoDB and S3.
                         Below you can find a copy of my resume!
-                        Enjoy!
+                        In terms of my experience, 
                         <br/>
                             <a 
                                 href='https://github.com/JuanchoAguirrre/awsresumechallenge.git' 
                                 target='_blank'
                                 rel="noopener noreferrer"
                             >
-                                Check the repo out 
+                                Check the repo out.
                             </a>
                     </h5>
                     <br/>

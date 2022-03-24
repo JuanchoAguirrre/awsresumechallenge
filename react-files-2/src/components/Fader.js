@@ -17,7 +17,9 @@ const Fader = props => {
             }, 1000);
     }, []) 
 
-    return  <div className={fadeProp.fade} >
+    return  <div className={fadeProp.fade}
+                style={{margin:'0'}}
+            >
            {props.children}
         </div>
     

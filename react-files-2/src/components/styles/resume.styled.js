@@ -6,8 +6,33 @@ export const StyledResume = styled.div`
     margin: 0.5em ;
 
 
+    .documentDiv {
+        z-index: 0;
+    }
+
     div > div {
         display: inline-block;
-        position: center ;
+        position: relative ;
+        z-index: 1;
+    }
+
+    
+    a > div {
+        padding: 12em 10em;
+        bottom: 4em;
+        margin: 2em;
+        background: radial-gradient(
+            ${({ theme }) => theme.colors.innerBody}  ,
+            transparent 90%);
+        position: absolute;
+        text-align: center;
+
+    }
+
+    a {
+        z-index: 3;
+        position: absolute;
+        display: inline-block;
+        margin: auto -2em;
     }
 `

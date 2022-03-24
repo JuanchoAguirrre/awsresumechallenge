@@ -1,12 +1,6 @@
 import pytest
-# import request
-import json
 from GetDB.app import getdb
 from PutDB.app import putdb
-
-
-# AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-# AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
 class Tests:
 
@@ -25,6 +19,3 @@ class Tests:
             }
 
             print(getdb(event,context))
-
-    # @pytest.mark.two
-    # def test_put():

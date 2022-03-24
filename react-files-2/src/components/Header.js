@@ -30,7 +30,7 @@ const Header = () => {
                     float: "left",
                 }}
                 >
-                    Juancho A
+                    The AWS Resume Challenge
                 </h2>
                 <h3
                 style={{
