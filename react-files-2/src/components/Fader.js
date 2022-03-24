@@ -9,13 +9,19 @@ const Fader = props => {
 
     useEffect(() => {
 
-        setInterval(() => {
-                    setFadeProp({
-                        fade:'fade-in'
-                    })
+        let isFade = true;
 
-            }, props.count);
-    }, []) 
+        if (isFade)
+            {
+                setInterval(() => {
+                        setFadeProp({
+                            fade:'fade-in'
+                        })
+
+                }, props.fadeCount);
+            }
+    return () => (isFade = false)
+    }, [ props.fadeCount]) 
 
     return  <div className={fadeProp.fade}
                 style={{margin:'0'}}

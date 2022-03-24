@@ -29,14 +29,14 @@ const Resume = () => {
                                         onMouseEnter={() => setDisplayText(true)}
                                         onMouseLeave={() => setDisplayText(false)}>
                                         {displayText && (
-                                                <Fader count="50">
+                                                <Fader fadeCount="50">
                                                         <a 
                                                                 href={resumePDF}
                                                                 target='_blank'
                                                                 rel="noopener noreferrer"
                                                         >
                                                                 <div>
-                                                                        Download it here
+                                                                        Download it here!
                                                                 </div>
                                                         </a>
                                                  </Fader>
