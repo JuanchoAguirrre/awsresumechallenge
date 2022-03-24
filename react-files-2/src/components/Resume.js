@@ -10,10 +10,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
 const heightVal = window.innerHeight / 1.3;
 
 const Resume = () => {
-
-        function test(){
-                console.log("Trigger")
-        }
         
         const [resumeHeight, setResumeHeight] = 
                 useState(heightVal);
