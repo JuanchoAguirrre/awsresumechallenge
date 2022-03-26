@@ -24,17 +24,6 @@ def getdb(event, context, dynamodb=None):
 
         Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
     """
-
-    # try:
-    #     ip = requests.get("http://checkip.amazonaws.com/")
-    # except requests.RequestException as e:
-    #     # Send some context about this error to Lambda Logs
-    #     print(e)
-
-    #     raise e
-
-
-
     __TableName__ = 'juanchos-cloud-resume-challenge'
     Primary_Col_Name = 'ID'
     Primary_Key = '1'
@@ -63,12 +52,3 @@ def getdb(event, context, dynamodb=None):
         }
     }
 
-    # message = {
-    #     "count": "2"
-    # }
-
-    # return {
-    #     "statusCode": 200,
-    #     'headers': {'Content-Type': 'application/json'},
-    #     'body': json.dumps(message)
-    # }

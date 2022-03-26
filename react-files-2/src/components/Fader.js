@@ -20,7 +20,7 @@ const Fader = props => {
 
                 }, props.fadeCount);
             }
-    return () => (isFade = false)
+        return () => (isFade = false)
     }, [ props.fadeCount]) 
 
     return  <div className={fadeProp.fade}

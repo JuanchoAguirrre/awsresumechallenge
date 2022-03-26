@@ -4,16 +4,7 @@ from decimal import Decimal
 
 # import requests
 
-
 def putdb(event, context, dynamodb=None):
-
-    # try:
-    #     ip = requests.get("http://checkip.amazonaws.com/")
-    # except requests.RequestException as e:
-    #     # Send some context about this error to Lambda Logs
-    #     print(e)
-
-    #     raise e
 
     __TableName__ = 'juanchos-cloud-resume-challenge'
     Primary_Col_Name = 'ID'
@@ -23,14 +14,6 @@ def putdb(event, context, dynamodb=None):
     dynamodb = boto3.resource('dynamodb')
 
     table = dynamodb.Table(__TableName__)
-
-
-    # response = table.put_item(
-    #     Item={
-    #         Primary_Col_Name: Primary_Key,
-    #         "visitCount" : "visitCount" + 1 
-    #     }
-    # )
 
 
     response = table.update_item(
@@ -43,8 +26,6 @@ def putdb(event, context, dynamodb=None):
         },
         ReturnValues="UPDATED_NEW"
     )
-
-    # return response
 
     return {
         'statusCode': "200",
