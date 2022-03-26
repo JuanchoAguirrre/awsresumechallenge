@@ -35,7 +35,8 @@ jobs:
 
       - name: dependency install
         run: |
-          /opt/hostedtoolcache/Python/3.10.2/x64/bin/python -m pip install --upgrade pip
+          ADD requirements.txt ./
+          python -m pip install --upgrade pip
           pip freeze > requirements.txt
           pip install -e .
 
