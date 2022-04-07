@@ -37,7 +37,6 @@ jobs:
         working-directory: ./tests
         run: |
           pip install -e .
-          python -m pip install --upgrade pip
           pip freeze > requirements.txt
 
       - name: unit tests
