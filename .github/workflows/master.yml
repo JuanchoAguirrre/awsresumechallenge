@@ -36,10 +36,9 @@ jobs:
       - name: dependency install
         working-directory: ./tests
         run: |
-          cat > requirements.txt
           python -m pip install --upgrade pip
-          pip freeze > requirements.txt
           pip install -e .
+          pip freeze > requirements.txt
 
       - name: unit tests
         working-directory: ./tests
