@@ -36,7 +36,7 @@ jobs:
       - name: dependency install
         working-directory: ./tests
         run: |
-          pip install -e .
+          pip install -e ./tests
           pip freeze > requirements.txt
 
       - name: unit tests
