@@ -31,12 +31,13 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: py setup
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v2
 
       - name: dependency install
-        run: |
-          pip install -e .
+        # path: x      run: |
+          # pip install -e .
           pip freeze > requirements.txt
+          
 
       - name: unit tests
         run: python -m pytest
