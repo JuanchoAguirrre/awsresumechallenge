@@ -34,8 +34,9 @@ jobs:
         uses: actions/setup-python@v2
 
       - name: dependency install
-        # path: x      run: |
-          # pip install -e .
+        # path: x              pip install -e .
+  
+        run: |
           pip freeze > requirements.txt
           
 
