@@ -40,7 +40,8 @@ jobs:
       #     pip freeze > requirements.txt
       - name: Install pipenv
         run: |
-          pipenv --python python
+          python -m pip install --upgrade pipenv wheel
+          sudo -H pip install -U pipenv
       - id: cache-pipenv
         uses: actions/cache@v1
         with:
