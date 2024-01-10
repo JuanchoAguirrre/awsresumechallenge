@@ -30,6 +30,26 @@ Resources:
   #       IndexDocument: index.html
   #     BucketName: "s3bucket.cloud-resume-challenge-2"
 
+  MyDistribution:
+    Type: AWS::CloudFront:Distribution
+    Properties:
+      DistributionConfig:
+        DefaultCacheBehavior:
+          ViewerProtocolPolicy: allow-all
+          TargetOriginId: http://s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
+          DefaultTTL: 0
+          MinTTL: 0
+          MaxTTL: 0
+          ForwardedValues:
+            QueryString: false
+        Origins:
+          - DomainName: http://s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
+            Id: http://s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
+            CustomOriginConfig:
+              OriginProtocolPolicy: match-viewer
+        Enabled: "true"
+        DefaultRootObject: index.html
+  
 
   DynamoDBTable:
     Type: AWS::DynamoDB::Table

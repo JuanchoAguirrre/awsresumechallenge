@@ -17,4 +17,12 @@ manifest_hash = ""
 packagetype = "Zip"
 functions = ["PutDB"]
 
+[function_build_definitions.29464b13-48e4-4c19-bfb5-48d5e69e726d]
+codeuri = "C:\\Users\\juanc\\Desktop\\Work\\CERTS\\ResumeChallenge\\SAM\\resume-challenge-sam"
+runtime = "nodejs12.x"
+architecture = "x86_64"
+manifest_hash = ""
+packagetype = "Zip"
+functions = ["LambdaFunctionOverHttps"]
+
 [layer_build_definitions]
