@@ -31,7 +31,7 @@ Resources:
   #     BucketName: "s3bucket.cloud-resume-challenge-2"
 
   MyDistribution:
-    Type: AWS::CloudFront:Distribution
+    Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
         DefaultCacheBehavior:

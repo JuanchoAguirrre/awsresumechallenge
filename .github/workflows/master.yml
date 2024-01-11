@@ -76,7 +76,6 @@ jobs:
 
   build-and-deploy-website:
     runs-on: ubuntu-latest
-
     defaults:
       run:
         working-directory: ./react-files-2
