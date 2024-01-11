@@ -14,7 +14,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Policies: AmazonDynamoDBFullAccess
       Events:
         HttpPost:
@@ -36,15 +36,15 @@ Resources:
       DistributionConfig:
         DefaultCacheBehavior:
           ViewerProtocolPolicy: allow-all
-          TargetOriginId: http://s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
+          TargetOriginId: s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
           DefaultTTL: 0
           MinTTL: 0
           MaxTTL: 0
           ForwardedValues:
             QueryString: false
         Origins:
-          - DomainName: http://s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
-            Id: http://s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
+          - DomainName: s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
+            Id: s3bucket.cloud-resume-challenge.s3-website-ap-southeast-2.amazonaws.com
             CustomOriginConfig:
               OriginProtocolPolicy: match-viewer
         Enabled: "true"
