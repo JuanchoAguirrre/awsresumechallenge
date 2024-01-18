@@ -82,7 +82,6 @@ Resources:
             Path: /putdb
             Method: POST
 
-
   MyDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -102,6 +101,17 @@ Resources:
               OriginProtocolPolicy: match-viewer
         Enabled: "true"
         DefaultRootObject: index.html
+
+  MyRoute53Record:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: Z0056923NJ36IF0W1973
+      RecordSets:
+        - Name: juanchoaguirre.com
+          Type: A
+          AliasTarget:
+            HostedZoneId: E3EAKX4B5W16E2
+            DNSName: !GetAtt MyDistribution.DomainName
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function

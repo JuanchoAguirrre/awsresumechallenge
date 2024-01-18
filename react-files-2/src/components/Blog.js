@@ -39,7 +39,7 @@ export const Blog = () => {
                     </i>
                 </InnerContainer>
             </div>
-            {/* <button className="download_resume" onClick={get_resume}>Download!</button> */}
+            <button className="download_resume" onClick={get_resume}>Download!</button>
             <div
             style={{
                 display: 'flex',
