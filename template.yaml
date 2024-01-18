@@ -110,7 +110,7 @@ Resources:
         - Name: juanchoaguirre.com
           Type: A
           AliasTarget:
-            HostedZoneId: E3EAKX4B5W16E2
+            HostedZoneId: Z2FDTNDATAQYW2
             DNSName: !GetAtt MyDistribution.DomainName
 
 Outputs:
