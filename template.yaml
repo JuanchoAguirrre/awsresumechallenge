@@ -135,3 +135,4 @@ Outputs:
   PutDBIamRole:
     Description: "Implicit IAM Role created for PutDB method"
     Value: !GetAtt PutDB.Arn
+    
