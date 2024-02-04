@@ -113,10 +113,6 @@ Resources:
             HostedZoneId: Z2FDTNDATAQYW2
             DNSName: !GetAtt MyDistribution.DomainName
 
-  # MyRoute53CNAME:
-  #   Type: AWS::Route53::RecordSetGroup
-  #   Properties:
-  #     HostedZoneName: juanchoaguirre.com
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
