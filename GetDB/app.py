@@ -46,8 +46,10 @@ def getdb(event, context, dynamodb=None):
         'headers': {
             "Content-Type" : "application/json",    
             "Access-Control-Allow-Origin" : "*",
-            "Allow" : "GET, OPTIONS, POST, PUT",
-            "Access-Control-Allow-Methods" : "GET, OPTIONS, POST, PUT",
+            # "Allow" : "GET, OPTIONS, POST, PUT",
+            "Allow" : "*",
+            # "Access-Control-Allow-Methods" : "GET, OPTIONS, POST, PUT",
+            "Access-Control-Allow-Methods" : "*",
             "Access-Control-Allow-Headers" : "*"
         }
     }
