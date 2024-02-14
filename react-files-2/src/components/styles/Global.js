@@ -22,7 +22,8 @@ const StyleGlobal = createGlobalStyle`
 
     /* thing causing resume to move w fade shoudld remove */
     div {
-        margin: 0.5em;
+        margin: 0em 1em;
+        display: inline-grid;
     }
 
     @media all and (max-device-width: 480px) {

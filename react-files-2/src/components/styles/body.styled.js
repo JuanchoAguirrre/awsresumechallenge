@@ -3,30 +3,33 @@ import styled from "styled-components";
 export const InnerContainer = styled.div`
     
     height: 100ch;
-    margin: 0em 5em;
-    display: inline-block;
-    border-radius: 25px;
-    block-size: fit-content;
-
-    background: linear-gradient(to bottom ,
-        ${({ theme }) => theme.colors.innerBody} ,
-       transparent 105%);
+    left: 0px;
+    vertical-align: middle;
 
     #blog-content {
+        margin: 0em 2em auto 2em;
         padding: 2em;
-        background: linear-gradient(#FFFFFF ,
+        background: linear-gradient(to bottom ,
+        ${({ theme }) => theme.colors.innerBody} ,
         transparent 105%);
+        width: 40%;
+    }
 
+    #resume {
+        width: 50%;
     }
 
 `
+
 export const OuterContainer = styled.div`
     
-    width: 100%;
+    width: 80%;
     min-height: 100ch;
-    padding: 1em 0;
-    margin: 0em  auto -5em auto;
-    display: table;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
 
     background: linear-gradient(to bottom,
         ${({ theme }) => theme.colors.outerBody} 40%,
@@ -42,3 +45,4 @@ export const OuterContainer = styled.div`
     }
 
 `
+

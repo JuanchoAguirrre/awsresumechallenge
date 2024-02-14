@@ -20,7 +20,7 @@ function App() {
 
     <ThemeProvider theme = {theme}>    
     <StyleGlobal/>
-        <Header  className="App-header"/>
+        <Header />
         <Body />
         <Footer />
     </ThemeProvider>

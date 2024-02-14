@@ -6,12 +6,14 @@ import React from 'react';
 import { OuterContainer } from './styles/body.styled';
 import Fader from './Fader'
 import Blog from './Blog';
+import Side from './Side.js';
 
 const Body = () =>  (
         <OuterContainer>
-            <Fader fadeCount="1000">
+            {/* <Fader fadeCount="1000"> */}
+                <Side/>
                 <Blog/>
-            </Fader>
+            {/* </Fader> */}
         </OuterContainer>
 );
 

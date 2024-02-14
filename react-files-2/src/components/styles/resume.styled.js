@@ -20,7 +20,7 @@ export const StyledResume = styled.div`
     a > div {
         padding: 12em 10em;
         bottom: 4em;
-        margin: 2em;
+        margin: 0 auto;
         background: radial-gradient(
             ${({ theme }) => theme.colors.outerBody}  ,
             transparent 80%);
@@ -31,7 +31,7 @@ export const StyledResume = styled.div`
 
     a {
         z-index: 3;
-        position: absolute;
+        position: relative;
         display: inline-block;
         margin: auto -2em;
     }
