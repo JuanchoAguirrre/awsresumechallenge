@@ -7,42 +7,27 @@ export const InnerContainer = styled.div`
     vertical-align: middle;
 
     #blog-content {
-        margin: 0em 2em auto 2em;
-        padding: 2em;
+        margin: 0em 12em auto -4em;
+        padding: 3em;
         background: linear-gradient(to bottom ,
         ${({ theme }) => theme.colors.innerBody} ,
         transparent 105%);
-        width: 40%;
+        width: 50%;
+        
+        div {
+            margin: 0px;
+            padding: 0px;
+            word-wrap: break-word;
+            text-align: left;
+        }
     }
 
     #resume {
-        width: 50%;
+        width: 20%;
+        margin: 0em 2em auto 2em;
+
     }
 
-`
-
-export const OuterContainer = styled.div`
-    
-    width: 80%;
-    min-height: 100ch;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    text-align: center;
-
-    background: linear-gradient(to bottom,
-        ${({ theme }) => theme.colors.outerBody} 40%,
-        transparent 130%);
-
-    .fade-in {
-        transition: opacity 1s ease;
-    }
-
-    .fade-out {
-        opacity: 0;
-        transition: opacity 1s ease;;
-    }
 
 `
 

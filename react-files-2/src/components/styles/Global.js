@@ -16,7 +16,7 @@ const StyleGlobal = createGlobalStyle`
 
     body {
         font-family: 'Sans', sans-serif;
-        font-size: 1.15em;
+        font-size: 1.25em;
         background-image: url(${backgroundImage});
     }
 

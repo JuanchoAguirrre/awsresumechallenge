@@ -12,15 +12,13 @@ export const Headshot = () => (
                 margin: '0',
                 display: 'flex',
                 justifyContent: 'center',
-                alignItems:'center',
-                // minHeight: '20px',
-                // minWidth: '20px'
+                alignItems:'center'
         }}>
             <ReactRoundedImage 
                 image={headshot}
                 alt='' 
-                imageHeight={window.innerHeight / 4.5}
-                imageWidth={(window.innerHeight / 4)}
+                imageHeight={window.innerHeight / 6.5}
+                imageWidth={(window.innerHeight / 6)}
                 roundedSize="10"
             />
         </div>

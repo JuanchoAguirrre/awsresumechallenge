@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import { OuterContainer } from './styles/body.styled';
+import { OuterContainer } from './styles/nonBody.styled';
 import Fader from './Fader'
 import Blog from './Blog';
 import Side from './Side.js';
