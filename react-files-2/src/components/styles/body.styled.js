@@ -23,8 +23,7 @@ export const InnerContainer = styled.div`
     }
 
     #resume {
-        width: 20%;
-        margin: 0em 2em auto 2em;
+        margin: 2em 2em auto -10em;
 
     }
 

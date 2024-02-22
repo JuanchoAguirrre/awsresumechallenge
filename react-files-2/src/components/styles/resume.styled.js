@@ -22,7 +22,7 @@ export const StyledResume = styled.div`
         bottom: 4em;
         margin: 0 auto;
         background: radial-gradient(
-            ${({ theme }) => theme.colors.outerBody}  ,
+            ${({ theme }) => theme.colors.outerBody},
             transparent 80%);
         position: absolute;
         text-align: center;

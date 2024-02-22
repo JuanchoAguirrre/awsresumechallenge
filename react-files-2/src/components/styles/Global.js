@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import backgroundImage from '../../public/background_img_pexels-pixabay-268415.jpg';
+import backgroundImage from '../../public/simple-gray-texture.jpg';
 
 // import { Image } from 'react';
 
