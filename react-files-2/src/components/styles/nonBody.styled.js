@@ -22,7 +22,8 @@ export const StyledHeader = styled.header`
 
 
 export const OuterContainer = styled.div`
-    
+
+
     width: 60%;
     min-height: 100ch;
     padding: 0em 3em;
@@ -30,6 +31,8 @@ export const OuterContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+
+
 
     background: linear-gradient(to bottom,
         ${({ theme }) => theme.colors.outerBody} 40%,

@@ -8,13 +8,13 @@ import Fader from './Fader'
 import Blog from './Blog';
 import Side from './Side.js';
 
-const Body = () =>  (
-        <OuterContainer>
-            {/* <Fader fadeCount="1000"> */}
-                <Side/>
-                <Blog/>
-            {/* </Fader> */}
-        </OuterContainer>
+const Body = () => (
+    <OuterContainer>
+        <Side />
+        <Fader fadeCount="800">
+            <Blog />
+        </Fader>
+    </OuterContainer>
 );
 
 
