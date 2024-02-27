@@ -7,12 +7,13 @@ export const InnerContainer = styled.div`
     vertical-align: middle;
 
     #blog-content {
-        margin: 0em 12em auto -4em;
-        padding: 3em;
-        background: linear-gradient(to bottom ,
+        margin: 0em 12em 0em -4em;
+        padding: 6em 3em 15em;
+        background: linear-gradient(to right,
         ${({ theme }) => theme.colors.innerBody} ,
-        transparent 105%);
+        transparent 85%);
         width: 50%;
+        color: white;
         
         div {
             margin: 0px;
@@ -24,7 +25,6 @@ export const InnerContainer = styled.div`
 
     #resume {
         margin: 2em 2em auto -10em;
-
     }
 
 

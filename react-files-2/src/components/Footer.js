@@ -5,6 +5,7 @@ const Footer = () => (
 
     <StyledFooter>
         <p>juanchovictor05@gmail.com |
+        &#160;
             <a 
                 href='https://github.com/JuanchoAguirrre' 
                 target='_blank'

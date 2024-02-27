@@ -28,6 +28,7 @@ export const OuterContainer = styled.div`
     min-height: 100ch;
     padding: 0em 3em;
     margin: auto;
+    margin-bottom: -5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;

@@ -8,25 +8,25 @@ const Side = () => (
                 <Headshot />
             <div>
                 <h5>
-                    Welcome to my website completely built
-                    using serverless Amazon Web Services. While securely served with Cloudfront and Route53 and hosted on S3,
+                    <p>Welcome to my website completely built
+                    using serverless Amazon Web Services. </p>
+                    <p>While securely served with Cloudfront and Route53 and hosted on S3,
                     on the top right is a a dynamic visitor counter implemented with DynamoDB, API Gateway, and Lambda.
-                    Below you can find a copy of my resume!
-                    <br />
+                    Below you can find a copy of my resume!</p>
                     <a
                         href='https://cloudresumechallenge.dev/docs/the-challenge/aws/'
                         target='_blank'
                         rel="noopener noreferrer"
                     >
-                        More information about the challenge
+                        Find information about the challenge here
                     </a>
-                    &#160;and&#160;
+                    &#160;or&#160;
                     <a
                         href='https://github.com/JuanchoAguirrre/awsresumechallenge.git'
                         target='_blank'
                         rel="noopener noreferrer"
                     >
-                    check my repo out here!
+                    check out my repository here!
                     </a>
 
                 </h5>

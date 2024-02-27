@@ -8,14 +8,16 @@ const StyleGlobal = createGlobalStyle`
     '952bab25f6798d6bb1937d67e9bee4dd?family=Sans');
 
     @import url('//db.onlinewebfonts.com/c/a78' + 
-    'cfad3beb089a6ce86d4e280fa270b?family=Calibri');
+    'cfad3beb089a6ce86d4e280fa270b?family=Roboto');
+
 
     header {
         font-family: 'Calibri';
     }
 
     body {
-        font-family: 'Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        color: white;
         font-size: 1.25em;
         background-image: url(${backgroundImage});
     }

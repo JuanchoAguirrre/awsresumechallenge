@@ -7,9 +7,9 @@ import StyleGlobal from './components/styles/Global.js';
 
 export const theme = {
   colors: {
-    header: '#659DBD' ,
-    innerBody: '#659DBD',
-    outerBody: '#93b7cc',
+    header: '#a8c5d6' ,
+    innerBody: '#86aec6',
+    outerBody: '#a8c5d6',
     backgroundFill: '#659DBD'
   }
 }
@@ -19,9 +19,9 @@ function App() {
   return (
 
     <ThemeProvider theme={theme}>
-      <StyleGlobal />
-        <Header />
-        <Body />
+      <StyleGlobal/>
+        <Header/>
+        <Body/>
         <Footer />
     </ThemeProvider>
 
