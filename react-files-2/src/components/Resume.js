@@ -48,7 +48,7 @@ const Resume = () => {
                                                                 rel="noopener noreferrer"
                                                         >
                                                                 <div>
-                                                                        Download it here!
+                                                                        <p>Download it here!</p>
                                                                 </div>
                                                         </a>
                                                 </Fader>

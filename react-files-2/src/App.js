@@ -7,10 +7,10 @@ import StyleGlobal from './components/styles/Global.js';
 
 export const theme = {
   colors: {
-    header: '#a8c5d6' ,
-    innerBody: '#86aec6',
-    outerBody: '#a8c5d6',
-    backgroundFill: '#659DBD'
+    header: '#4e7c96' ,
+    innerBody: '#456c82',
+    outerBody: '#4e7c96',
+    backgroundFill: '#4e7c96'
   }
 }
 

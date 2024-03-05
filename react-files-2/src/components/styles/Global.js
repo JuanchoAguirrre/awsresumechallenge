@@ -4,21 +4,22 @@ import backgroundImage from '../../public/simple-gray-texture.jpg';
 // import { Image } from 'react';
 
 const StyleGlobal = createGlobalStyle`
-    @import url('//db.onlinewebfonts.com/c/' +
-    '952bab25f6798d6bb1937d67e9bee4dd?family=Sans');
-
-    @import url('//db.onlinewebfonts.com/c/a78' + 
-    'cfad3beb089a6ce86d4e280fa270b?family=Roboto');
 
 
     header {
-        font-family: 'Calibri';
+        font-family: 'Roboto';
+        font-weight: normal;
+    color: white;
+
     }
 
     body {
-        font-family: 'Roboto', sans-serif;
-        color: white;
-        font-size: 1.25em;
+        font-family: 'Roboto';
+        p , a {
+            color: white;
+            font-size: 1.15em;
+            font-weight: normal;
+        }
         background-image: url(${backgroundImage});
     }
 

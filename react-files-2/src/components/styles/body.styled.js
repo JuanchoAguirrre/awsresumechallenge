@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const InnerContainer = styled.div`
     
-    height: 100ch;
-    left: 0px;
+    height: 120ch;
     vertical-align: middle;
 
     #blog-content {
-        margin: 0em 12em 0em -4em;
-        padding: 6em 3em 15em;
+        margin: 0em 1em 0em -4em;
+        padding: 6em 3em 10em;
         background: linear-gradient(to right,
         ${({ theme }) => theme.colors.innerBody} ,
         transparent 85%);
