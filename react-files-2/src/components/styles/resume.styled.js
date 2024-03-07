@@ -20,7 +20,8 @@ export const StyledResume = styled.div`
     a > div {
         padding: 12em 13em;
         bottom: 8em;
-        /* margin: 0 auto; */
+        text-align: center;
+
         background: radial-gradient(
             ${({ theme }) => theme.colors.outerBody},
             transparent 80%);

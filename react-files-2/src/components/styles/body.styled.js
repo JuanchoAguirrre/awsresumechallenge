@@ -7,7 +7,7 @@ export const InnerContainer = styled.div`
 
     #blog-content {
         margin: 0em 1em 0em -4em;
-        padding: 6em 3em 10em;
+        padding: 0em 5em 0em;
         background: linear-gradient(to right,
         ${({ theme }) => theme.colors.innerBody} ,
         transparent 85%);
@@ -23,7 +23,7 @@ export const InnerContainer = styled.div`
     }
 
     #resume {
-        margin: 2em 2em auto -10em;
+        margin: 6em 2em auto -10em;
     }
 
 

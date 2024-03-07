@@ -25,10 +25,9 @@ export const OuterContainer = styled.div`
 
 
     width: 60%;
-    min-height: 100ch;
+    min-height: 40em;
     padding: 0em 3em;
     margin: auto;
-    margin-bottom: -5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -55,5 +54,6 @@ export const StyledFooter = styled.div`
     position: relative;
     align-items: right ;
     display: table;
+    p , a {color: #456c82;}
 
 `

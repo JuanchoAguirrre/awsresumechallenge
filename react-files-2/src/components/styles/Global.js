@@ -8,22 +8,19 @@ const StyleGlobal = createGlobalStyle`
 
     header {
         font-family: 'Roboto';
-        font-weight: normal;
-    color: white;
-
+        color: white;
     }
 
     body {
         font-family: 'Roboto';
         p , a {
             color: white;
-            font-size: 1.15em;
+            font-size: 1.20em;
             font-weight: normal;
         }
         background-image: url(${backgroundImage});
     }
 
-    /* thing causing resume to move w fade shoudld remove */
     div {
         margin: 0em 1em;
         display: inline-grid;

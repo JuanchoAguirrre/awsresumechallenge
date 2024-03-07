@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import {Document, Page, pdfjs} from 'react-pdf'
+import { Document, Page, pdfjs } from 'react-pdf'
 import resumePDF from '../public/resume.pdf';
 import { StyledResume } from './styles/resume.styled'
 import Fader from './Fader'
@@ -21,17 +21,6 @@ const Resume = () => {
         const [displayText, setDisplayText] =
                 useState(false);
 
-        // function setResumeHeight() {
-
-        //         useEffect(() => {
-        //                 window.addEventListener('resize', setResumeHeight)
-
-        //                 return () => {
-        //                         window.removeEventListener('resize', setResumeHeight);
-        //                 };
-
-        //         }, [])
-        // }
 
         return (
                 <StyledResume>
@@ -39,7 +28,8 @@ const Resume = () => {
 
                                 <div
                                         onMouseEnter={() => setDisplayText(true)}
-                                        onMouseLeave={() => setDisplayText(false)}>
+                                        onMouseLeave={() => setDisplayText(false)}
+                                >
                                         {displayText && (
                                                 <Fader fadeCount="50">
                                                         <a
@@ -59,7 +49,7 @@ const Resume = () => {
                                                         loading="Loading Page..."
                                                 >
                                                         <Page size="A4"
-                                                        //  style={styles.page}
+                                                                //  style={styles.page}
                                                                 pageNumber={1}
                                                                 orientation="portrait"
                                                                 height={resumeHeight}

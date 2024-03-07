@@ -3,7 +3,7 @@
 
 import React from 'react';
 import ReactRoundedImage from "react-rounded-image";
-import headshot from '../public/headshot_3.png';
+import headshot from '../public/headshot_4.jpg';
 
 
 export const Headshot = () => (
@@ -17,9 +17,9 @@ export const Headshot = () => (
             <ReactRoundedImage 
                 image={headshot}
                 alt='' 
-                imageHeight={window.innerHeight / 6}
-                imageWidth={(window.innerHeight / 6)}
-                roundedSize="10"
+                imageHeight={window.innerHeight / 4}
+                imageWidth={(window.innerHeight / 4)}
+                roundedSize="0"
             />
         </div>
 
