@@ -21,6 +21,10 @@ const Resume = () => {
         const [displayText, setDisplayText] =
                 useState(false);
 
+        
+        useEffect(() => {
+                        setResumeHeight(heightVal);
+        }, [])
 
         return (
                 <StyledResume>
