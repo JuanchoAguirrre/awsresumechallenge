@@ -21,7 +21,7 @@ export const StyledHeader = styled.header`
 `
 
 
-export const OuterContainer = styled.div`
+export const BlogContainer = styled.div`
 
 
     width: 60%;
