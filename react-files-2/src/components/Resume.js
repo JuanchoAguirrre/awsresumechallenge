@@ -7,7 +7,7 @@ import Fader from './Fader'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const heightVal = window.innerHeight / 1.3;
+const heightVal = window.innerHeight / 1.2;
 
 // const styles = StyleSheet.create({
 //         page: { height: 30}
@@ -53,7 +53,6 @@ const Resume = () => {
                                                         loading="Loading Page..."
                                                 >
                                                         <Page size="A4"
-                                                                //  style={styles.page}
                                                                 pageNumber={1}
                                                                 orientation="portrait"
                                                                 height={resumeHeight}

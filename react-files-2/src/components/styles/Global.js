@@ -5,19 +5,20 @@ import backgroundImage from '../../public/simple-gray-texture.jpg';
 
 const StyleGlobal = createGlobalStyle`
 
+        
+    p , a {
+            font-weight: normal;
+            color: white;
+            font-size: 1em;
+        }
 
     header {
-        font-family: 'Roboto';
-        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
     }
 
     body {
         font-family: 'Roboto';
-        p , a {
-            color: white;
-            font-size: 1.20em;
-            font-weight: normal;
-        }
         background-image: url(${backgroundImage});
     }
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
     
     overflow: hidden;   
-    padding: 0em 3em;
+    padding: 0em 2.15em;
     margin: auto;
     width: 60%;
     display: table;
@@ -19,25 +19,18 @@ export const StyledHeader = styled.header`
     }
 
 `
-
-
-export const BlogContainer = styled.div`
-
+export const BackgroundContainer = styled.div`
 
     width: 60%;
-    min-height: 40em;
     padding: 0em 3em;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-
 
 
     background: linear-gradient(to bottom,
-        ${({ theme }) => theme.colors.outerBody} 40%,
-        transparent 130%);
+            ${({ theme }) => theme.colors.outerBody} 40%,
+            transparent 130%);
 
+    
     .fade-in {
         transition: opacity 1s ease;
     }
@@ -45,6 +38,30 @@ export const BlogContainer = styled.div`
     .fade-out {
         opacity: 0;
         transition: opacity 1s ease;;
+    }
+
+`
+
+export const BlogContainer = styled.div`
+
+
+    min-height: 40em;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    .test {
+        p {
+            color: black;
+        }
+    }
+
+    #diagram-image {
+        margin: auto;
+        height: auto;   
+        padding: 2em 2em 2em 8em;
+        max-width: 200%;
     }
 
 `

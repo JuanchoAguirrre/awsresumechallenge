@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import { BlogContainer } from './styles/nonBody.styled';
+import { BlogContainer, BackgroundContainer } from './styles/nonBody.styled';
 import { InnerContainer } from './styles/body.styled';
 import diagram from '../public/diagram.png'
 import Fader from './Fader'
@@ -11,27 +11,22 @@ import Blog from './Blog.js';
 import Resume from './Resume';
 
 const Body = () => (
-    <div>
-        <BlogContainer>
-            <Blog />
-            <Fader fadeCount="800">
+    <BackgroundContainer>
+        <Fader fadeCount="800">
+            <BlogContainer>
+                <Blog />
                 <InnerContainer >
-                    <div
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }}
-                        id='resume'
-                    >
+                    <div  id='resume'  >
                         <Resume />
                     </div>
                 </InnerContainer>
-            </Fader>
-        </BlogContainer>
-        <div>
-            <img src={diagram} alt="Diagram" />
-        </div>
-    </div>
+                <div>
+                    <p>Services Diagram</p>
+                    <img id="diagram-image" src={diagram} alt="Diagram" />
+                </div>
+            </BlogContainer>
+        </Fader>
+    </BackgroundContainer>
 );
 
 
