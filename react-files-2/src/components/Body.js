@@ -12,7 +12,7 @@ import Resume from './Resume';
 
 const Body = () => (
     <BackgroundContainer>
-        <Fader fadeCount="800">
+        {/* <Fader fadeCount="800"> */}
             <BlogContainer>
                 <Blog />
                 <InnerContainer >
@@ -21,11 +21,11 @@ const Body = () => (
                     </div>
                 </InnerContainer>
                 <div>
-                    <p>Services Diagram</p>
+                    <h2><p>Services Diagram</p></h2>
                     <img id="diagram-image" src={diagram} alt="Diagram" />
                 </div>
             </BlogContainer>
-        </Fader>
+        {/* </Fader> */}
     </BackgroundContainer>
 );
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const InnerContainer = styled.div`
     
-    height: 120ch;
+    height: 50em;
     vertical-align: middle;
 
 
@@ -13,13 +13,21 @@ export const InnerContainer = styled.div`
         ${({ theme }) => theme.colors.innerBody} ,
         transparent 85%);
         width: 50%;
+                
+        #face-img {
+            margin-top: 5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         p {
-            margin-top: -8em;
+            /* margin-top: -5em; */
+            padding: 0;
         }
-        
+
+
         div {
-            margin-bottom: 0em;
             padding: 0em;
             word-wrap: break-word;
             text-align: left;

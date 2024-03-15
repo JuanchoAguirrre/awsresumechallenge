@@ -7,13 +7,7 @@ import headshot from '../public/headshot_4.jpg';
 
 
 export const Headshot = () => (
-        <div
-            style={{
-                margin: '0',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems:'center'
-        }}>
+        <div id="face-img">
             <ReactRoundedImage 
                 image={headshot}
                 alt='' 

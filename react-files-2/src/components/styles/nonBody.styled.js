@@ -45,7 +45,7 @@ export const BackgroundContainer = styled.div`
 export const BlogContainer = styled.div`
 
 
-    min-height: 40em;
+    min-height: 90em;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;

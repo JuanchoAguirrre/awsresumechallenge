@@ -33,13 +33,13 @@ const Header = () => {
             >
                 <p>    The AWS Resume Challenge </p>
             </h2>
-            <h3
+            <h2
                 style={{
                     float: "right",
                 }}
             >
                 <p>    Visit Counter: {visitCount}</p>
-            </h3>
+            </h2>
         </StyledHeader>
     )
 }
