@@ -12,7 +12,7 @@ import Resume from './Resume';
 
 const Body = () => (
     <BackgroundContainer>
-        {/* <Fader fadeCount="800"> */}
+        <Fader fadeCount="800">
             <BlogContainer>
                 <Blog />
                 <InnerContainer >
@@ -25,7 +25,7 @@ const Body = () => (
                     <img id="diagram-image" src={diagram} alt="Diagram" />
                 </div>
             </BlogContainer>
-        {/* </Fader> */}
+        </Fader>
     </BackgroundContainer>
 );
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { InnerContainer } from './styles/body.styled';
 import { Headshot } from './Headshot';
 
