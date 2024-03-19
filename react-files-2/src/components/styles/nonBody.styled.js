@@ -6,6 +6,7 @@ export const StyledHeader = styled.header`
     padding: 0em 2.15em;
     margin: auto;
     width: 60%;
+    min-width: 60%;
     display: table;
     grid-template-columns: 1fr 1fr;
 
@@ -13,15 +14,35 @@ export const StyledHeader = styled.header`
         ${({ theme }) => theme.colors.header} ,
        transparent 85%);
 
-    div {
-        margin: 0;
-        align-items: right;
+    #title-text {
+        @media only screen and (min-width: 1280px) {
+            float: left;
+        }
+    }
+
+    #vistor-counter-text {
+        @media only screen and (min-width: 1280px) {
+            float: right;
+        }
     }
 
 `
+
+export const StyledFooter = styled.div`
+
+    margin: 0 auto;
+    min-width: 70%;
+    position: relative;
+    align-items: right ;
+    display: table;
+    p , a {color: #456c82;}
+
+`
+
 export const BackgroundContainer = styled.div`
 
     width: 60%;
+    min-width: 60%;
     padding: 0em 3em;
     margin: auto;
 
@@ -65,12 +86,4 @@ export const BlogContainer = styled.div`
     }
 
 `
-export const StyledFooter = styled.div`
 
-    margin: 0 auto;
-    position: relative;
-    align-items: right ;
-    display: table;
-    p , a {color: #456c82;}
-
-`

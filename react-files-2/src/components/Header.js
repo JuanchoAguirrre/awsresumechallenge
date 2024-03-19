@@ -26,18 +26,10 @@ const Header = () => {
 
     return (
         <StyledHeader>
-            <h2
-                style={{
-                    float: "left",
-                }}
-            >
+            <h2 id="title-text">
                 <p>    The AWS Resume Challenge </p>
             </h2>
-            <h2
-                style={{
-                    float: "right",
-                }}
-            >
+            <h2 id="vistor-counter-text" >
                 <p>    Visit Counter: {visitCount}</p>
             </h2>
         </StyledHeader>

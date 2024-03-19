@@ -11,7 +11,7 @@ const heightVal = window.innerHeight / 1.2;
 
 // const styles = StyleSheet.create({
 //         page: { height: 30}
-// })j
+// });
 
 const Resume = () => {
 

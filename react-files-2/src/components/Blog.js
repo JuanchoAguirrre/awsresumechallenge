@@ -13,7 +13,11 @@ const Blog2 = () => (
                     serverless Amazon Web Services and third party tools. Securely served with Cloudfront and Route53 and hosted on S3,
                     the aim of the challenge was to build a website with a backend
                     leveraging solely serverless services. For example, the dynamic
-                    visitor counter found
+                    visitor counter found at the top right is powered by an AWS Lambda function,
+                    DynamoDB table, and API Gateway, all written in python.
+                </p>
+                <p>
+                    Below you can find a diagram of the services used to power this website
                 </p>
                 <a
                     href='https://cloudresumechallenge.dev/docs/the-challenge/aws/'

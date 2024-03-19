@@ -22,7 +22,6 @@ export const InnerContainer = styled.div`
         }
 
         p {
-            /* margin-top: -5em; */
             padding: 0;
         }
 
