@@ -1,11 +1,12 @@
 
 import React, { useEffect, useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf'
+// import { Document, Page, pdfjs } from 'react-pdf'
+import { Document, Page } from '@react-pdf/renderer'
 import resumePDF from '../public/resume.pdf';
 import { StyledResume } from './styles/resume.styled'
 import Fader from './Fader'
 
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const heightVal = window.innerHeight / 1.2;
 
@@ -15,16 +16,16 @@ const heightVal = window.innerHeight / 1.2;
 
 const Resume = () => {
 
-        const [resumeHeight, setResumeHeight] =
-                useState(heightVal);
+        // const [resumeHeight, setResumeHeight] =
+        //         useState(heightVal);
 
         const [displayText, setDisplayText] =
                 useState(false);
 
         
-        useEffect(() => {
-                        setResumeHeight(heightVal);
-        }, [])
+        // useEffect(() => {
+        //                 setResumeHeight(heightVal);
+        // }, [])
 
         return (
                 <StyledResume>
@@ -49,13 +50,13 @@ const Resume = () => {
                                         )}
                                         <div className='documentDiv'>
                                                 < Document
-                                                        file={resumePDF}
-                                                        loading="Loading Page..."
+                                                        // file={resumePDF}
+                                                        // loading="Loading Page..."
                                                 >
                                                         <Page size="A4"
-                                                                pageNumber={1}
-                                                                orientation="portrait"
-                                                                height={resumeHeight}
+                                                                // pageNumber={1}
+                                                                // orientation="portrait"
+                                                                // height={resumeHeight}
                                                         />
                                                 </Document>
                                         </div>

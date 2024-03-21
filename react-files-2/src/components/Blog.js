@@ -5,7 +5,6 @@ import { Headshot } from './Headshot';
 const Blog2 = () => (
     <InnerContainer>
         <div id="blog-content">
-
             <Headshot />
             <div>
                 <p >

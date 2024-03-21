@@ -5,8 +5,8 @@ export const StyledHeader = styled.header`
     overflow: hidden;   
     padding: 0em 2.15em;
     margin: auto;
-    width: 60%;
-    min-width: 60%;
+    width: 65%;
+    min-width: 65%;
     display: table;
     grid-template-columns: 1fr 1fr;
 
@@ -14,14 +14,11 @@ export const StyledHeader = styled.header`
         ${({ theme }) => theme.colors.header} ,
        transparent 85%);
 
-    #title-text {
-        @media only screen and (min-width: 1280px) {
+    @media only screen and (min-width: 1280px) {
+        #title-text {
             float: left;
         }
-    }
-
-    #vistor-counter-text {
-        @media only screen and (min-width: 1280px) {
+        #vistor-counter-text {
             float: right;
         }
     }
@@ -31,7 +28,7 @@ export const StyledHeader = styled.header`
 export const StyledFooter = styled.div`
 
     margin: 0 auto;
-    min-width: 70%;
+    min-width: 65%;
     position: relative;
     align-items: right ;
     display: table;
@@ -41,8 +38,8 @@ export const StyledFooter = styled.div`
 
 export const BackgroundContainer = styled.div`
 
-    width: 60%;
-    min-width: 60%;
+    width: 65%;
+    min-width: 65%;
     padding: 0em 3em;
     margin: auto;
 
