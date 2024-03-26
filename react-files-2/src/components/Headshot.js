@@ -11,8 +11,8 @@ export const Headshot = () => (
             <ReactRoundedImage 
                 image={headshot}
                 alt='' 
-                imageHeight={window.innerHeight / 4}
-                imageWidth={(window.innerHeight / 4)}
+                imageHeight={window.innerHeight / 4.5}
+                imageWidth={(window.innerHeight / 4.5)}
                 roundedSize="0"
             />
         </div>

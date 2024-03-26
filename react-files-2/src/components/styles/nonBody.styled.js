@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
     overflow: hidden;   
     padding: 0em 2.15em;
     margin: auto;
-    width: 65%;
+    width: 70%;
     min-width: 65%;
     display: table;
     grid-template-columns: 1fr 1fr;
@@ -28,9 +28,9 @@ export const StyledHeader = styled.header`
 export const StyledFooter = styled.div`
 
     margin: 0 auto;
-    min-width: 65%;
+    min-width: 70%;
     position: relative;
-    align-items: right ;
+    align-items: center;
     display: table;
     p , a {color: #456c82;}
 
@@ -38,8 +38,8 @@ export const StyledFooter = styled.div`
 
 export const BackgroundContainer = styled.div`
 
-    width: 65%;
-    min-width: 65%;
+    width: 70%;
+    min-width: 70%;
     padding: 0em 3em;
     margin: auto;
 
@@ -76,10 +76,8 @@ export const BlogContainer = styled.div`
     }
 
     #diagram-image {
-        margin: auto;
-        height: auto;   
-        padding: 2em 2em 2em 8em;
-        max-width: 200%;
+        padding: 2em -10em 2em 8em;
+        max-width: 180%;
     }
 
 `

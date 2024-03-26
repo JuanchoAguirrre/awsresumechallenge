@@ -34,7 +34,7 @@ export const InnerContainer = styled.div`
     }
 
     #resume {
-        margin: 6em 2em auto -8em;
+        margin: 6em 2em auto -10em;
         display: flex;
         justify-content: center;
     }
