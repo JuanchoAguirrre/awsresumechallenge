@@ -9,7 +9,8 @@ const Footer = () => (
                 href='mailto:juanchovictor05@gmail.com'
                 target='_blank'
                 rel="noopener noreferrer"
-            >juanchovictor05@gmail.com </a>
+            >juanchovictor05@gmail.com</a>
+            &#160;
             |
             &#160;
             <a

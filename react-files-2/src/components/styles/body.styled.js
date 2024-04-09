@@ -39,6 +39,10 @@ export const InnerContainer = styled.div`
         justify-content: center;
     }
 
+    #diagram-title {
+        margin: auto;
+    }
+
 
 `
 

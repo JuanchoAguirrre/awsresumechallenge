@@ -27,11 +27,11 @@ export const StyledHeader = styled.header`
 
 export const StyledFooter = styled.div`
 
-    margin: 0 auto;
-    min-width: 70%;
+    width: 100%;
     position: relative;
-    align-items: center;
+    margin: 0 25%;
     display: table;
+    align-items: center;
     p , a {color: #456c82;}
 
 `
@@ -42,7 +42,6 @@ export const BackgroundContainer = styled.div`
     min-width: 70%;
     padding: 0em 3em;
     margin: auto;
-
 
     background: linear-gradient(to bottom,
             ${({ theme }) => theme.colors.outerBody} 40%,
@@ -63,7 +62,7 @@ export const BackgroundContainer = styled.div`
 export const BlogContainer = styled.div`
 
 
-    min-height: 90em;
+    min-height: 80em;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -76,8 +75,8 @@ export const BlogContainer = styled.div`
     }
 
     #diagram-image {
-        padding: 2em -10em 2em 8em;
-        max-width: 180%;
+        margin: 2em -10em 5em 8em;
+        max-width: 150%;
     }
 
 `

@@ -21,7 +21,7 @@ const Body = () => (
                     </div>
                 </InnerContainer>
                 <div>
-                    <h2><p>Services Diagram</p></h2>
+                    <h2 id="diagram-title"><p>Services Diagram</p></h2>
                     <img id="diagram-image" src={diagram} alt="Diagram" />
                 </div>
             </BlogContainer>

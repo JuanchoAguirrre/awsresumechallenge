@@ -7,20 +7,21 @@ import Fader from './Fader'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const heightVal = window.innerHeight / 1.4;
+const actualHeightVal = window.innerWidth / 2;
 
 
 const Resume = () => {
 
+        let workedHeightVal = actualHeightVal > 640 ? 640 : actualHeightVal;
+
         const [resumeHeight, setResumeHeight] =
-                useState(heightVal);
+                useState(workedHeightVal);
 
         const [displayText, setDisplayText] =
                 useState(false);
 
-        
         useEffect(() => {
-                        setResumeHeight(heightVal);
+                        setResumeHeight(workedHeightVal);
         }, [])
 
         return (
