@@ -27,9 +27,9 @@ export const StyledHeader = styled.header`
 
 export const StyledFooter = styled.div`
 
-    width: 100%;
+    width: 70%;
     position: relative;
-    margin: 0 25%;
+    margin: 0 30%;
     display: table;
     align-items: center;
     p , a {color: #456c82;}
