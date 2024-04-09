@@ -22,7 +22,7 @@ const Resume = () => {
 
         useEffect(() => {
                         setResumeHeight(workedHeightVal);
-        }, [])
+        }, [workedHeightVal])
 
         return (
                 <StyledResume>
