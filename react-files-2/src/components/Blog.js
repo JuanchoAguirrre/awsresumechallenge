@@ -8,11 +8,9 @@ const Blog2 = () => (
             <Headshot />
             <div>
                 <p >
-                    Welcome to my website entirely composed of
-                    serverless Amazon Web Services and third party tools. Securely served with Cloudfront and Route53 and hosted on S3,
-                    the aim of the challenge was to build a website with a backend
-                    leveraging solely serverless services. For example, the dynamic
-                    visitor counter found at the top right is powered by an AWS Lambda function,
+                    Securely served with Cloudfront and Route53 and hosted on S3,
+                    the aim of the challenge was to build a website with a solely serverless backend.
+                    The dynamic visitor counter found at the top right is also powered by an AWS Lambda function,
                     DynamoDB table, and API Gateway, all written in python.
                 </p>
                 <p>
