@@ -7,10 +7,10 @@ import StyleGlobal from './components/styles/Global.js';
 
 export const theme = {
   colors: {
-      header: 'rgb(98.4%,93.3%,75.7%, 0.8)',
-      innerBody: '#FBEEC1',
-      outerBody:'rgb(85.5%,67.8%,52.5%, 0.8)',
-      backgroundFill:'#659DBD  '
+    header: '#4e7c96' ,
+    innerBody: '#456c82',
+    outerBody: '#4e7c96',
+    backgroundFill: '#4e7c96'
   }
 }
 
@@ -18,10 +18,10 @@ function App() {
 
   return (
 
-    <ThemeProvider theme = {theme}>    
-    <StyleGlobal/>
-        <Header  className="App-header"/>
-        <Body />
+    <ThemeProvider theme={theme}>
+      <StyleGlobal/>
+        <Header/>
+        <Body/>
         <Footer />
     </ThemeProvider>
 

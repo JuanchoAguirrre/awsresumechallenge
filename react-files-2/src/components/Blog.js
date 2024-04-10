@@ -1,64 +1,34 @@
-import React from 'react';
-
+import React from 'react'
 import { InnerContainer } from './styles/body.styled';
-import Resume from './Resume';
 import { Headshot } from './Headshot';
 
-export const Blog = () => {
- 
-    return (  
-        <InnerContainer>
+const Blog2 = () => (
+    <InnerContainer>
+        <div id="blog-content">
+            <Headshot />
             <div>
-                <h1>Juancho A</h1>
-                <Headshot/>
-                <InnerContainer id='blog-content'>
-                    <h5>
-                        Welcome to my website completely built 
-                        using serverless Amazon Web Services. While securely served with Cloudfront and Route53 and hosted on S3,
-                        on the top right is a a dynamic visitor counter implemented with DynamoDB, API Gateway, and Lambda.
-                        Below you can find a copy of my resume!
-                        <br/>
-                            <a 
-                                href='https://cloudresumechallenge.dev/docs/the-challenge/aws/' 
-                                target='_blank'
-                                rel="noopener noreferrer"
-                            >
-                                More information about the challenge  
-                            </a>
-                            &#160;and &#160;
-                             <a 
-                                href='https://github.com/JuanchoAguirrre/awsresumechallenge.git' 
-                                target='_blank'
-                                rel="noopener noreferrer"
-                            >
-                                check my repo out here!
-                            </a>
-                            
-                    </h5>
-                    <br/>
-                    <i>
-                        <h3
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'right'
-                        }}
-                        >
-                            Juancho
-                        </h3>
-                    </i>
-                </InnerContainer>
+                <p >
+                    Securely served with Cloudfront and Route53 and hosted on S3,
+                    the aim of the challenge was to build a website with a solely serverless backend.
+                    The dynamic visitor counter found at the top right is also powered by an AWS Lambda function,
+                    DynamoDB table, and API Gateway, all written in python.
+                </p>
+                <p>
+                    Below you can find a diagram of the services used to power this website
+                </p>
+                <a
+                    href='https://cloudresumechallenge.dev/docs/the-challenge/aws/'
+                    target='_blank'
+                    rel="noopener noreferrer"
+                >
+                    <p>
+                        Find out more information about the challenge
+                    </p>
+                </a>
             </div>
-            {/* <button className="download_resume" onClick={get_resume}>Download!</button> */}
-            <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center'
-            }}
-            >
-                <Resume/>
-            </div>
-        </InnerContainer>
-    )
-}
+        </div>
+    </InnerContainer>
 
-export default Blog;
+);
+
+export default Blog2

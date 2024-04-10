@@ -3,25 +3,17 @@
 
 import React from 'react';
 import ReactRoundedImage from "react-rounded-image";
-import headshot from '../public/headshot_3.png';
+import headshot from '../public/headshot_4.jpg';
 
 
 export const Headshot = () => (
-        <div
-            style={{
-                margin: '0',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems:'center',
-                // minHeight: '20px',
-                // minWidth: '20px'
-        }}>
+        <div id="face-img">
             <ReactRoundedImage 
                 image={headshot}
                 alt='' 
                 imageHeight={window.innerHeight / 4.5}
-                imageWidth={(window.innerHeight / 4)}
-                roundedSize="10"
+                imageWidth={(window.innerHeight / 4.5)}
+                roundedSize="0"
             />
         </div>
 

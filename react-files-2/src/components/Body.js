@@ -3,16 +3,30 @@
 
 import React from 'react';
 
-import { OuterContainer } from './styles/body.styled';
+import { BlogContainer, BackgroundContainer } from './styles/nonBody.styled';
+import { InnerContainer } from './styles/body.styled';
+import diagram from '../public/diagram.png'
 import Fader from './Fader'
-import Blog from './Blog';
+import Blog from './Blog.js';
+import Resume from './Resume';
 
-const Body = () =>  (
-        <OuterContainer>
-            <Fader fadeCount="1000">
-                <Blog/>
-            </Fader>
-        </OuterContainer>
+const Body = () => (
+    <BackgroundContainer>
+        <Fader fadeCount="800">
+            <BlogContainer>
+                <Blog />
+                <InnerContainer >
+                    <div  id='resume'  >
+                        <Resume />
+                    </div>
+                </InnerContainer>
+                <div>
+                    <h2 id="diagram-title"><p>Services Diagram</p></h2>
+                    <img id="diagram-image" src={diagram} alt="Diagram" />
+                </div>
+            </BlogContainer>
+        </Fader>
+    </BackgroundContainer>
 );
 
 

@@ -1,52 +1,56 @@
 
 import React, { useEffect, useState } from 'react';
-import {Document, Page, pdfjs} from 'react-pdf'
+import { Document, Page, pdfjs } from 'react-pdf'
 import resumePDF from '../public/resume.pdf';
-import {StyledResume} from './styles/resume.styled'
+import { StyledResume } from './styles/resume.styled'
 import Fader from './Fader'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const heightVal = window.innerHeight / 1.3;
+const actualHeightVal = window.innerWidth / 2;
+
 
 const Resume = () => {
-        
-        const [resumeHeight, setResumeHeight] = 
-                useState(heightVal);
-        
+
+        let workedHeightVal = actualHeightVal > 640 ? 640 : actualHeightVal;
+
+        const [resumeHeight, setResumeHeight] =
+                useState(workedHeightVal);
+
         const [displayText, setDisplayText] =
                 useState(false);
 
         useEffect(() => {
-                        setResumeHeight(heightVal);
-        }, [])
+                        setResumeHeight(workedHeightVal);
+        }, [workedHeightVal])
 
         return (
                 <StyledResume>
                         <div >
 
-                                <div 
+                                <div
                                         onMouseEnter={() => setDisplayText(true)}
-                                        onMouseLeave={() => setDisplayText(false)}>
+                                        onMouseLeave={() => setDisplayText(false)}
+                                >
                                         {displayText && (
                                                 <Fader fadeCount="50">
-                                                        <a 
+                                                        <a
                                                                 href={resumePDF}
                                                                 target='_blank'
                                                                 rel="noopener noreferrer"
                                                         >
                                                                 <div>
-                                                                        Download it here!
+                                                                        <p>Download it here!</p>
                                                                 </div>
                                                         </a>
-                                                 </Fader>
+                                                </Fader>
                                         )}
                                         <div className='documentDiv'>
-                                                < Document 
+                                                < Document
                                                         file={resumePDF}
                                                         loading="Loading Page..."
                                                 >
-                                                        <Page  
+                                                        <Page size="A4"
                                                                 pageNumber={1}
                                                                 orientation="portrait"
                                                                 height={resumeHeight}
