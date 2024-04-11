@@ -11,7 +11,7 @@ const Footer = () => (
                 rel="noopener noreferrer"
             >juanchovictor05@gmail.com</a>
             &#160;
-            |
+            //
             &#160;
             <a
                 href='https://github.com/JuanchoAguirrre'

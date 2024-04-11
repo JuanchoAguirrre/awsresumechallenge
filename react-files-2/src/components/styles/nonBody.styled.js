@@ -29,7 +29,7 @@ export const StyledFooter = styled.div`
 
     width: 70%;
     position: relative;
-    margin: 0 30%;
+    margin: 0 28%;
     display: table;
     align-items: center;
     p , a {color: #456c82;}
@@ -40,6 +40,7 @@ export const BackgroundContainer = styled.div`
 
     width: 70%;
     min-width: 70%;
+    /* min-height: 120%; */
     padding: 0em 3em;
     margin: auto;
 
@@ -62,7 +63,7 @@ export const BackgroundContainer = styled.div`
 export const BlogContainer = styled.div`
 
 
-    min-height: 80em;
+    min-height: 100em;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -75,8 +76,8 @@ export const BlogContainer = styled.div`
     }
 
     #diagram-image {
-        margin: 2em -10em 5em 8em;
-        max-width: 150%;
+        margin: 20em -10em 5em 8em;
+        max-width: 180%;
     }
 
 `

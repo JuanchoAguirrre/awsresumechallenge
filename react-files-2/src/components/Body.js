@@ -5,7 +5,7 @@ import React from 'react';
 
 import { BlogContainer, BackgroundContainer } from './styles/nonBody.styled';
 import { InnerContainer } from './styles/body.styled';
-import diagram from '../public/diagram.png'
+import diagram from '../public/diagram.jpeg'
 import Fader from './Fader'
 import Blog from './Blog.js';
 import Resume from './Resume';
@@ -21,7 +21,6 @@ const Body = () => (
                     </div>
                 </InnerContainer>
                 <div>
-                    <h2 id="diagram-title"><p>Services Diagram</p></h2>
                     <img id="diagram-image" src={diagram} alt="Diagram" />
                 </div>
             </BlogContainer>

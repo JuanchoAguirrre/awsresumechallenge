@@ -10,6 +10,11 @@ const StyleGlobal = createGlobalStyle`
             font-size: 1em;
         }
 
+    h3 {
+        color: white;
+        margin-bottom: -5%;
+    }
+
     header {
         font-size: 1.4em;
         font-weight: bold;
