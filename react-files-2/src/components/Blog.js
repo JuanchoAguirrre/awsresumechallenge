@@ -9,7 +9,7 @@ const Blog2 = () => (
             <div>
                 <h3>About me</h3>
                 <p>
-                    My name's Juancho and I'm an IT enthusiast with experience as a cloud engineer, full stack developer
+                    My name's Juancho and I'm an IT enthusiast with experience as a cloud engineer, full stack developer,
                     and software engineer. I'm interested in the latest developments in DevOps, AI, and digital health to name a few.
                     In my free time, I play guitar, write music and screenplays, as well as participate in musicals and 
                     practice Brazilian jiu-jitsu.
